@@ -1,0 +1,4707 @@
+# This file was generated based on ".graphqlconfig". Do not edit manually.
+
+schema {
+    query: query_root
+    mutation: mutation_root
+    subscription: subscription_root
+}
+
+"columns and relationships of \"impact.annual_statement\""
+type impact_annual_statement {
+    abn: bigint
+    aboriginal_or_tsi: String
+    adults_25_to_65: String
+    adults_65_and_over: String
+    ais_due_date: String
+    all_other_expenses: Int
+    all_other_revenue: Int
+    annual_statement_id: Int!
+    basic_religious_charity: String
+    cash_or_accrual: String
+    category: String
+    charity_name: String
+    charity_size: String
+    children_6_to_under_15: String
+    conducted_activities: String
+    country: String
+    date_ais_received: String
+    description_of_purposes_change_if_applicable: String
+    donations_and_bequests: Int
+    due_date: date
+    early_childhood_under_6: String
+    employee_expenses: Int
+    fin_report_from: timestamp
+    fin_report_to: String
+    financial_report_date_received: String
+    funded_by_ndis: String
+    grants_and_donations_made_for_use_in_australia: Int
+    grants_and_donations_made_for_use_outside_australia: Int
+    how_purposes_were_pursued: String
+    intend_to_provide_ndis: String
+    interest_expenses: Int
+    main_activity: String
+    main_beneficiaries: String
+    net_assets_liabilities: Int
+    net_surplus_deficit: Int
+    non_current_loans_payable: Int
+    non_current_loans_receivable: Int
+    operates_in_act: String
+    operates_in_nsw: String
+    operates_in_nt: String
+    operates_in_qld: String
+    operates_in_sa: String
+    operates_in_tas: String
+    operates_in_vic: String
+    operates_in_wa: String
+    operates_overseas: String
+    operating_countries: String
+    org_id: bigint
+    "An object relationship"
+    organisation: impact_organisation
+    other_activities_description: String
+    other_activity: String
+    other_beneficiaries_description: String
+    other_beneficiaries_not_listed: String
+    other_comprehensive_income: Int
+    other_income: Int
+    other_non_current_assets: Int
+    other_non_current_liabilities: Int
+    postcode: Int
+    received_date: date
+    registration_status: String
+    report_consolidated_with_more_than_one_entity: String
+    revenue_from_goods_and_services: String
+    revenue_from_government: Int
+    revenue_from_investments: String
+    staff_casual: Int
+    staff_full_time: Int
+    staff_part_time: Int
+    staff_volunteers: String
+    state: String
+    total_assets: Int
+    total_comprehensive_income: String
+    total_current_assets: Int
+    total_current_liabilities: Int
+    total_expenses: Int
+    total_full_time_equivalent_staff: Int
+    total_gross_income: Int
+    total_liabilities: Int
+    total_non_current_assets: Int
+    total_non_current_liabilities: Int
+    total_revenue: Int
+    town_city: String
+    type_of_financial_statement: String
+    why_charity_did_not_conduct_activities: String
+    will_purposes_change_in_the_next_financial_year: String
+    year: Int
+    youth_15_to_u25: String
+}
+
+"aggregated selection of \"impact.annual_statement\""
+type impact_annual_statement_aggregate {
+    aggregate: impact_annual_statement_aggregate_fields
+    nodes: [impact_annual_statement!]!
+}
+
+"aggregate fields of \"impact.annual_statement\""
+type impact_annual_statement_aggregate_fields {
+    avg: impact_annual_statement_avg_fields
+    count(columns: [impact_annual_statement_select_column!], distinct: Boolean): Int
+    max: impact_annual_statement_max_fields
+    min: impact_annual_statement_min_fields
+    stddev: impact_annual_statement_stddev_fields
+    stddev_pop: impact_annual_statement_stddev_pop_fields
+    stddev_samp: impact_annual_statement_stddev_samp_fields
+    sum: impact_annual_statement_sum_fields
+    var_pop: impact_annual_statement_var_pop_fields
+    var_samp: impact_annual_statement_var_samp_fields
+    variance: impact_annual_statement_variance_fields
+}
+
+"aggregate avg on columns"
+type impact_annual_statement_avg_fields {
+    abn: Float
+    all_other_expenses: Float
+    all_other_revenue: Float
+    annual_statement_id: Float
+    donations_and_bequests: Float
+    employee_expenses: Float
+    grants_and_donations_made_for_use_in_australia: Float
+    grants_and_donations_made_for_use_outside_australia: Float
+    interest_expenses: Float
+    net_assets_liabilities: Float
+    net_surplus_deficit: Float
+    non_current_loans_payable: Float
+    non_current_loans_receivable: Float
+    org_id: Float
+    other_comprehensive_income: Float
+    other_income: Float
+    other_non_current_assets: Float
+    other_non_current_liabilities: Float
+    postcode: Float
+    revenue_from_government: Float
+    staff_casual: Float
+    staff_full_time: Float
+    staff_part_time: Float
+    total_assets: Float
+    total_current_assets: Float
+    total_current_liabilities: Float
+    total_expenses: Float
+    total_full_time_equivalent_staff: Float
+    total_gross_income: Float
+    total_liabilities: Float
+    total_non_current_assets: Float
+    total_non_current_liabilities: Float
+    total_revenue: Float
+    year: Float
+}
+
+"aggregate max on columns"
+type impact_annual_statement_max_fields {
+    abn: bigint
+    aboriginal_or_tsi: String
+    adults_25_to_65: String
+    adults_65_and_over: String
+    ais_due_date: String
+    all_other_expenses: Int
+    all_other_revenue: Int
+    annual_statement_id: Int
+    basic_religious_charity: String
+    cash_or_accrual: String
+    category: String
+    charity_name: String
+    charity_size: String
+    children_6_to_under_15: String
+    conducted_activities: String
+    country: String
+    date_ais_received: String
+    description_of_purposes_change_if_applicable: String
+    donations_and_bequests: Int
+    due_date: date
+    early_childhood_under_6: String
+    employee_expenses: Int
+    fin_report_to: String
+    financial_report_date_received: String
+    funded_by_ndis: String
+    grants_and_donations_made_for_use_in_australia: Int
+    grants_and_donations_made_for_use_outside_australia: Int
+    how_purposes_were_pursued: String
+    intend_to_provide_ndis: String
+    interest_expenses: Int
+    main_activity: String
+    main_beneficiaries: String
+    net_assets_liabilities: Int
+    net_surplus_deficit: Int
+    non_current_loans_payable: Int
+    non_current_loans_receivable: Int
+    operates_in_act: String
+    operates_in_nsw: String
+    operates_in_nt: String
+    operates_in_qld: String
+    operates_in_sa: String
+    operates_in_tas: String
+    operates_in_vic: String
+    operates_in_wa: String
+    operates_overseas: String
+    operating_countries: String
+    org_id: bigint
+    other_activities_description: String
+    other_activity: String
+    other_beneficiaries_description: String
+    other_beneficiaries_not_listed: String
+    other_comprehensive_income: Int
+    other_income: Int
+    other_non_current_assets: Int
+    other_non_current_liabilities: Int
+    postcode: Int
+    received_date: date
+    registration_status: String
+    report_consolidated_with_more_than_one_entity: String
+    revenue_from_goods_and_services: String
+    revenue_from_government: Int
+    revenue_from_investments: String
+    staff_casual: Int
+    staff_full_time: Int
+    staff_part_time: Int
+    staff_volunteers: String
+    state: String
+    total_assets: Int
+    total_comprehensive_income: String
+    total_current_assets: Int
+    total_current_liabilities: Int
+    total_expenses: Int
+    total_full_time_equivalent_staff: Int
+    total_gross_income: Int
+    total_liabilities: Int
+    total_non_current_assets: Int
+    total_non_current_liabilities: Int
+    total_revenue: Int
+    town_city: String
+    type_of_financial_statement: String
+    why_charity_did_not_conduct_activities: String
+    will_purposes_change_in_the_next_financial_year: String
+    year: Int
+    youth_15_to_u25: String
+}
+
+"aggregate min on columns"
+type impact_annual_statement_min_fields {
+    abn: bigint
+    aboriginal_or_tsi: String
+    adults_25_to_65: String
+    adults_65_and_over: String
+    ais_due_date: String
+    all_other_expenses: Int
+    all_other_revenue: Int
+    annual_statement_id: Int
+    basic_religious_charity: String
+    cash_or_accrual: String
+    category: String
+    charity_name: String
+    charity_size: String
+    children_6_to_under_15: String
+    conducted_activities: String
+    country: String
+    date_ais_received: String
+    description_of_purposes_change_if_applicable: String
+    donations_and_bequests: Int
+    due_date: date
+    early_childhood_under_6: String
+    employee_expenses: Int
+    fin_report_to: String
+    financial_report_date_received: String
+    funded_by_ndis: String
+    grants_and_donations_made_for_use_in_australia: Int
+    grants_and_donations_made_for_use_outside_australia: Int
+    how_purposes_were_pursued: String
+    intend_to_provide_ndis: String
+    interest_expenses: Int
+    main_activity: String
+    main_beneficiaries: String
+    net_assets_liabilities: Int
+    net_surplus_deficit: Int
+    non_current_loans_payable: Int
+    non_current_loans_receivable: Int
+    operates_in_act: String
+    operates_in_nsw: String
+    operates_in_nt: String
+    operates_in_qld: String
+    operates_in_sa: String
+    operates_in_tas: String
+    operates_in_vic: String
+    operates_in_wa: String
+    operates_overseas: String
+    operating_countries: String
+    org_id: bigint
+    other_activities_description: String
+    other_activity: String
+    other_beneficiaries_description: String
+    other_beneficiaries_not_listed: String
+    other_comprehensive_income: Int
+    other_income: Int
+    other_non_current_assets: Int
+    other_non_current_liabilities: Int
+    postcode: Int
+    received_date: date
+    registration_status: String
+    report_consolidated_with_more_than_one_entity: String
+    revenue_from_goods_and_services: String
+    revenue_from_government: Int
+    revenue_from_investments: String
+    staff_casual: Int
+    staff_full_time: Int
+    staff_part_time: Int
+    staff_volunteers: String
+    state: String
+    total_assets: Int
+    total_comprehensive_income: String
+    total_current_assets: Int
+    total_current_liabilities: Int
+    total_expenses: Int
+    total_full_time_equivalent_staff: Int
+    total_gross_income: Int
+    total_liabilities: Int
+    total_non_current_assets: Int
+    total_non_current_liabilities: Int
+    total_revenue: Int
+    town_city: String
+    type_of_financial_statement: String
+    why_charity_did_not_conduct_activities: String
+    will_purposes_change_in_the_next_financial_year: String
+    year: Int
+    youth_15_to_u25: String
+}
+
+"response of any mutation on the table \"impact.annual_statement\""
+type impact_annual_statement_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [impact_annual_statement!]!
+}
+
+"aggregate stddev on columns"
+type impact_annual_statement_stddev_fields {
+    abn: Float
+    all_other_expenses: Float
+    all_other_revenue: Float
+    annual_statement_id: Float
+    donations_and_bequests: Float
+    employee_expenses: Float
+    grants_and_donations_made_for_use_in_australia: Float
+    grants_and_donations_made_for_use_outside_australia: Float
+    interest_expenses: Float
+    net_assets_liabilities: Float
+    net_surplus_deficit: Float
+    non_current_loans_payable: Float
+    non_current_loans_receivable: Float
+    org_id: Float
+    other_comprehensive_income: Float
+    other_income: Float
+    other_non_current_assets: Float
+    other_non_current_liabilities: Float
+    postcode: Float
+    revenue_from_government: Float
+    staff_casual: Float
+    staff_full_time: Float
+    staff_part_time: Float
+    total_assets: Float
+    total_current_assets: Float
+    total_current_liabilities: Float
+    total_expenses: Float
+    total_full_time_equivalent_staff: Float
+    total_gross_income: Float
+    total_liabilities: Float
+    total_non_current_assets: Float
+    total_non_current_liabilities: Float
+    total_revenue: Float
+    year: Float
+}
+
+"aggregate stddev_pop on columns"
+type impact_annual_statement_stddev_pop_fields {
+    abn: Float
+    all_other_expenses: Float
+    all_other_revenue: Float
+    annual_statement_id: Float
+    donations_and_bequests: Float
+    employee_expenses: Float
+    grants_and_donations_made_for_use_in_australia: Float
+    grants_and_donations_made_for_use_outside_australia: Float
+    interest_expenses: Float
+    net_assets_liabilities: Float
+    net_surplus_deficit: Float
+    non_current_loans_payable: Float
+    non_current_loans_receivable: Float
+    org_id: Float
+    other_comprehensive_income: Float
+    other_income: Float
+    other_non_current_assets: Float
+    other_non_current_liabilities: Float
+    postcode: Float
+    revenue_from_government: Float
+    staff_casual: Float
+    staff_full_time: Float
+    staff_part_time: Float
+    total_assets: Float
+    total_current_assets: Float
+    total_current_liabilities: Float
+    total_expenses: Float
+    total_full_time_equivalent_staff: Float
+    total_gross_income: Float
+    total_liabilities: Float
+    total_non_current_assets: Float
+    total_non_current_liabilities: Float
+    total_revenue: Float
+    year: Float
+}
+
+"aggregate stddev_samp on columns"
+type impact_annual_statement_stddev_samp_fields {
+    abn: Float
+    all_other_expenses: Float
+    all_other_revenue: Float
+    annual_statement_id: Float
+    donations_and_bequests: Float
+    employee_expenses: Float
+    grants_and_donations_made_for_use_in_australia: Float
+    grants_and_donations_made_for_use_outside_australia: Float
+    interest_expenses: Float
+    net_assets_liabilities: Float
+    net_surplus_deficit: Float
+    non_current_loans_payable: Float
+    non_current_loans_receivable: Float
+    org_id: Float
+    other_comprehensive_income: Float
+    other_income: Float
+    other_non_current_assets: Float
+    other_non_current_liabilities: Float
+    postcode: Float
+    revenue_from_government: Float
+    staff_casual: Float
+    staff_full_time: Float
+    staff_part_time: Float
+    total_assets: Float
+    total_current_assets: Float
+    total_current_liabilities: Float
+    total_expenses: Float
+    total_full_time_equivalent_staff: Float
+    total_gross_income: Float
+    total_liabilities: Float
+    total_non_current_assets: Float
+    total_non_current_liabilities: Float
+    total_revenue: Float
+    year: Float
+}
+
+"aggregate sum on columns"
+type impact_annual_statement_sum_fields {
+    abn: bigint
+    all_other_expenses: Int
+    all_other_revenue: Int
+    annual_statement_id: Int
+    donations_and_bequests: Int
+    employee_expenses: Int
+    grants_and_donations_made_for_use_in_australia: Int
+    grants_and_donations_made_for_use_outside_australia: Int
+    interest_expenses: Int
+    net_assets_liabilities: Int
+    net_surplus_deficit: Int
+    non_current_loans_payable: Int
+    non_current_loans_receivable: Int
+    org_id: bigint
+    other_comprehensive_income: Int
+    other_income: Int
+    other_non_current_assets: Int
+    other_non_current_liabilities: Int
+    postcode: Int
+    revenue_from_government: Int
+    staff_casual: Int
+    staff_full_time: Int
+    staff_part_time: Int
+    total_assets: Int
+    total_current_assets: Int
+    total_current_liabilities: Int
+    total_expenses: Int
+    total_full_time_equivalent_staff: Int
+    total_gross_income: Int
+    total_liabilities: Int
+    total_non_current_assets: Int
+    total_non_current_liabilities: Int
+    total_revenue: Int
+    year: Int
+}
+
+"aggregate var_pop on columns"
+type impact_annual_statement_var_pop_fields {
+    abn: Float
+    all_other_expenses: Float
+    all_other_revenue: Float
+    annual_statement_id: Float
+    donations_and_bequests: Float
+    employee_expenses: Float
+    grants_and_donations_made_for_use_in_australia: Float
+    grants_and_donations_made_for_use_outside_australia: Float
+    interest_expenses: Float
+    net_assets_liabilities: Float
+    net_surplus_deficit: Float
+    non_current_loans_payable: Float
+    non_current_loans_receivable: Float
+    org_id: Float
+    other_comprehensive_income: Float
+    other_income: Float
+    other_non_current_assets: Float
+    other_non_current_liabilities: Float
+    postcode: Float
+    revenue_from_government: Float
+    staff_casual: Float
+    staff_full_time: Float
+    staff_part_time: Float
+    total_assets: Float
+    total_current_assets: Float
+    total_current_liabilities: Float
+    total_expenses: Float
+    total_full_time_equivalent_staff: Float
+    total_gross_income: Float
+    total_liabilities: Float
+    total_non_current_assets: Float
+    total_non_current_liabilities: Float
+    total_revenue: Float
+    year: Float
+}
+
+"aggregate var_samp on columns"
+type impact_annual_statement_var_samp_fields {
+    abn: Float
+    all_other_expenses: Float
+    all_other_revenue: Float
+    annual_statement_id: Float
+    donations_and_bequests: Float
+    employee_expenses: Float
+    grants_and_donations_made_for_use_in_australia: Float
+    grants_and_donations_made_for_use_outside_australia: Float
+    interest_expenses: Float
+    net_assets_liabilities: Float
+    net_surplus_deficit: Float
+    non_current_loans_payable: Float
+    non_current_loans_receivable: Float
+    org_id: Float
+    other_comprehensive_income: Float
+    other_income: Float
+    other_non_current_assets: Float
+    other_non_current_liabilities: Float
+    postcode: Float
+    revenue_from_government: Float
+    staff_casual: Float
+    staff_full_time: Float
+    staff_part_time: Float
+    total_assets: Float
+    total_current_assets: Float
+    total_current_liabilities: Float
+    total_expenses: Float
+    total_full_time_equivalent_staff: Float
+    total_gross_income: Float
+    total_liabilities: Float
+    total_non_current_assets: Float
+    total_non_current_liabilities: Float
+    total_revenue: Float
+    year: Float
+}
+
+"aggregate variance on columns"
+type impact_annual_statement_variance_fields {
+    abn: Float
+    all_other_expenses: Float
+    all_other_revenue: Float
+    annual_statement_id: Float
+    donations_and_bequests: Float
+    employee_expenses: Float
+    grants_and_donations_made_for_use_in_australia: Float
+    grants_and_donations_made_for_use_outside_australia: Float
+    interest_expenses: Float
+    net_assets_liabilities: Float
+    net_surplus_deficit: Float
+    non_current_loans_payable: Float
+    non_current_loans_receivable: Float
+    org_id: Float
+    other_comprehensive_income: Float
+    other_income: Float
+    other_non_current_assets: Float
+    other_non_current_liabilities: Float
+    postcode: Float
+    revenue_from_government: Float
+    staff_casual: Float
+    staff_full_time: Float
+    staff_part_time: Float
+    total_assets: Float
+    total_current_assets: Float
+    total_current_liabilities: Float
+    total_expenses: Float
+    total_full_time_equivalent_staff: Float
+    total_gross_income: Float
+    total_liabilities: Float
+    total_non_current_assets: Float
+    total_non_current_liabilities: Float
+    total_revenue: Float
+    year: Float
+}
+
+"columns and relationships of \"impact.document\""
+type impact_document {
+    created_at: timestamptz!
+    date_received: date
+    doc_id: bigint!
+    due_date: date
+    org_id: bigint
+    "An object relationship"
+    organisation: impact_organisation
+    title: String
+    updated_at: timestamptz!
+    url: String
+}
+
+"aggregated selection of \"impact.document\""
+type impact_document_aggregate {
+    aggregate: impact_document_aggregate_fields
+    nodes: [impact_document!]!
+}
+
+"aggregate fields of \"impact.document\""
+type impact_document_aggregate_fields {
+    avg: impact_document_avg_fields
+    count(columns: [impact_document_select_column!], distinct: Boolean): Int
+    max: impact_document_max_fields
+    min: impact_document_min_fields
+    stddev: impact_document_stddev_fields
+    stddev_pop: impact_document_stddev_pop_fields
+    stddev_samp: impact_document_stddev_samp_fields
+    sum: impact_document_sum_fields
+    var_pop: impact_document_var_pop_fields
+    var_samp: impact_document_var_samp_fields
+    variance: impact_document_variance_fields
+}
+
+"aggregate avg on columns"
+type impact_document_avg_fields {
+    doc_id: Float
+    org_id: Float
+}
+
+"aggregate max on columns"
+type impact_document_max_fields {
+    created_at: timestamptz
+    date_received: date
+    doc_id: bigint
+    due_date: date
+    org_id: bigint
+    title: String
+    updated_at: timestamptz
+    url: String
+}
+
+"aggregate min on columns"
+type impact_document_min_fields {
+    created_at: timestamptz
+    date_received: date
+    doc_id: bigint
+    due_date: date
+    org_id: bigint
+    title: String
+    updated_at: timestamptz
+    url: String
+}
+
+"response of any mutation on the table \"impact.document\""
+type impact_document_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [impact_document!]!
+}
+
+"aggregate stddev on columns"
+type impact_document_stddev_fields {
+    doc_id: Float
+    org_id: Float
+}
+
+"aggregate stddev_pop on columns"
+type impact_document_stddev_pop_fields {
+    doc_id: Float
+    org_id: Float
+}
+
+"aggregate stddev_samp on columns"
+type impact_document_stddev_samp_fields {
+    doc_id: Float
+    org_id: Float
+}
+
+"aggregate sum on columns"
+type impact_document_sum_fields {
+    doc_id: bigint
+    org_id: bigint
+}
+
+"aggregate var_pop on columns"
+type impact_document_var_pop_fields {
+    doc_id: Float
+    org_id: Float
+}
+
+"aggregate var_samp on columns"
+type impact_document_var_samp_fields {
+    doc_id: Float
+    org_id: Float
+}
+
+"aggregate variance on columns"
+type impact_document_variance_fields {
+    doc_id: Float
+    org_id: Float
+}
+
+"columns and relationships of \"impact.org_people\""
+type impact_org_people {
+    org_id: bigint
+    org_person_id: bigint
+    "An object relationship"
+    organisation: impact_organisation
+    "An object relationship"
+    person: impact_people
+    person_id: bigint
+    position: String
+}
+
+"aggregated selection of \"impact.org_people\""
+type impact_org_people_aggregate {
+    aggregate: impact_org_people_aggregate_fields
+    nodes: [impact_org_people!]!
+}
+
+"aggregate fields of \"impact.org_people\""
+type impact_org_people_aggregate_fields {
+    avg: impact_org_people_avg_fields
+    count(columns: [impact_org_people_select_column!], distinct: Boolean): Int
+    max: impact_org_people_max_fields
+    min: impact_org_people_min_fields
+    stddev: impact_org_people_stddev_fields
+    stddev_pop: impact_org_people_stddev_pop_fields
+    stddev_samp: impact_org_people_stddev_samp_fields
+    sum: impact_org_people_sum_fields
+    var_pop: impact_org_people_var_pop_fields
+    var_samp: impact_org_people_var_samp_fields
+    variance: impact_org_people_variance_fields
+}
+
+"aggregate avg on columns"
+type impact_org_people_avg_fields {
+    org_id: Float
+    org_person_id: Float
+    person_id: Float
+}
+
+"aggregate max on columns"
+type impact_org_people_max_fields {
+    org_id: bigint
+    org_person_id: bigint
+    person_id: bigint
+    position: String
+}
+
+"aggregate min on columns"
+type impact_org_people_min_fields {
+    org_id: bigint
+    org_person_id: bigint
+    person_id: bigint
+    position: String
+}
+
+"response of any mutation on the table \"impact.org_people\""
+type impact_org_people_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [impact_org_people!]!
+}
+
+"aggregate stddev on columns"
+type impact_org_people_stddev_fields {
+    org_id: Float
+    org_person_id: Float
+    person_id: Float
+}
+
+"aggregate stddev_pop on columns"
+type impact_org_people_stddev_pop_fields {
+    org_id: Float
+    org_person_id: Float
+    person_id: Float
+}
+
+"aggregate stddev_samp on columns"
+type impact_org_people_stddev_samp_fields {
+    org_id: Float
+    org_person_id: Float
+    person_id: Float
+}
+
+"aggregate sum on columns"
+type impact_org_people_sum_fields {
+    org_id: bigint
+    org_person_id: bigint
+    person_id: bigint
+}
+
+"aggregate var_pop on columns"
+type impact_org_people_var_pop_fields {
+    org_id: Float
+    org_person_id: Float
+    person_id: Float
+}
+
+"aggregate var_samp on columns"
+type impact_org_people_var_samp_fields {
+    org_id: Float
+    org_person_id: Float
+    person_id: Float
+}
+
+"aggregate variance on columns"
+type impact_org_people_variance_fields {
+    org_id: Float
+    org_person_id: Float
+    person_id: Float
+}
+
+"columns and relationships of \"impact.organisation\""
+type impact_organisation {
+    abn: bigint!
+    acnc_id: String
+    acnc_url: String
+    address: String
+    "An array relationship"
+    annual_statements(
+        "distinct select on columns"
+        distinct_on: [impact_annual_statement_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_annual_statement_order_by!],
+        "filter the rows returned"
+        where: impact_annual_statement_bool_exp
+    ): [impact_annual_statement!]!
+    "An aggregated array relationship"
+    annual_statements_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_annual_statement_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_annual_statement_order_by!],
+        "filter the rows returned"
+        where: impact_annual_statement_bool_exp
+    ): impact_annual_statement_aggregate!
+    benefits: String!
+    country: String
+    data_checked_date: date
+    deductible_gift_recipient: String
+    "An array relationship"
+    documents(
+        "distinct select on columns"
+        distinct_on: [impact_document_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_document_order_by!],
+        "filter the rows returned"
+        where: impact_document_bool_exp
+    ): [impact_document!]!
+    "An aggregated array relationship"
+    documents_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_document_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_document_order_by!],
+        "filter the rows returned"
+        where: impact_document_bool_exp
+    ): impact_document_aggregate!
+    email: String
+    email_service: String
+    estab_year: Int
+    facebook: String
+    fin_year_end: String
+    glass_door: String
+    google_review_rating: String
+    gov_diversity_statement: String
+    gov_donate_statement: String
+    gov_funding_use: String
+    gov_impact_statement: String
+    gov_statement: String
+    helps_who: String
+    keywords: String!
+    last_reported_total_revenue: numeric
+    linkedin: String
+    logo_url: String
+    name: String!
+    operates_aus: String!
+    operates_os: String!
+    operates_where: String
+    org_id: bigint!
+    "An array relationship"
+    org_people(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): [impact_org_people!]!
+    "An aggregated array relationship"
+    org_people_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): impact_org_people_aggregate!
+    org_size: String
+    phone: String
+    postcode: String
+    postcodeold: Int
+    published: Int!
+    purpose: String
+    reported_last: date
+    reported_next: date
+    state: String
+    suburb: String
+    summary: String
+    tis_gov_impact: Int
+    tis_gov_people: Int
+    tis_gov_process: Int
+    tis_gov_purpose: Int
+    tis_gov_review: Int
+    tis_liquidity_rating: Int
+    tis_lotus: Int
+    tis_lotus_impact: Int
+    tis_lotus_people: Int
+    tis_lotus_process: Int
+    tis_lotus_purpose: Int
+    tis_lotus_review: Int
+    tis_rating: Int
+    tis_sector: String
+    twitter: String
+    type: String
+    website: String
+}
+
+"aggregated selection of \"impact.organisation\""
+type impact_organisation_aggregate {
+    aggregate: impact_organisation_aggregate_fields
+    nodes: [impact_organisation!]!
+}
+
+"aggregate fields of \"impact.organisation\""
+type impact_organisation_aggregate_fields {
+    avg: impact_organisation_avg_fields
+    count(columns: [impact_organisation_select_column!], distinct: Boolean): Int
+    max: impact_organisation_max_fields
+    min: impact_organisation_min_fields
+    stddev: impact_organisation_stddev_fields
+    stddev_pop: impact_organisation_stddev_pop_fields
+    stddev_samp: impact_organisation_stddev_samp_fields
+    sum: impact_organisation_sum_fields
+    var_pop: impact_organisation_var_pop_fields
+    var_samp: impact_organisation_var_samp_fields
+    variance: impact_organisation_variance_fields
+}
+
+"aggregate avg on columns"
+type impact_organisation_avg_fields {
+    abn: Float
+    estab_year: Float
+    last_reported_total_revenue: Float
+    org_id: Float
+    postcodeold: Float
+    published: Float
+    tis_gov_impact: Float
+    tis_gov_people: Float
+    tis_gov_process: Float
+    tis_gov_purpose: Float
+    tis_gov_review: Float
+    tis_liquidity_rating: Float
+    tis_lotus: Float
+    tis_lotus_impact: Float
+    tis_lotus_people: Float
+    tis_lotus_process: Float
+    tis_lotus_purpose: Float
+    tis_lotus_review: Float
+    tis_rating: Float
+}
+
+"aggregate max on columns"
+type impact_organisation_max_fields {
+    abn: bigint
+    acnc_id: String
+    acnc_url: String
+    address: String
+    benefits: String
+    country: String
+    data_checked_date: date
+    deductible_gift_recipient: String
+    email: String
+    email_service: String
+    estab_year: Int
+    facebook: String
+    fin_year_end: String
+    glass_door: String
+    google_review_rating: String
+    gov_diversity_statement: String
+    gov_donate_statement: String
+    gov_funding_use: String
+    gov_impact_statement: String
+    gov_statement: String
+    helps_who: String
+    keywords: String
+    last_reported_total_revenue: numeric
+    linkedin: String
+    logo_url: String
+    name: String
+    operates_aus: String
+    operates_os: String
+    operates_where: String
+    org_id: bigint
+    org_size: String
+    phone: String
+    postcode: String
+    postcodeold: Int
+    published: Int
+    purpose: String
+    reported_last: date
+    reported_next: date
+    state: String
+    suburb: String
+    summary: String
+    tis_gov_impact: Int
+    tis_gov_people: Int
+    tis_gov_process: Int
+    tis_gov_purpose: Int
+    tis_gov_review: Int
+    tis_liquidity_rating: Int
+    tis_lotus: Int
+    tis_lotus_impact: Int
+    tis_lotus_people: Int
+    tis_lotus_process: Int
+    tis_lotus_purpose: Int
+    tis_lotus_review: Int
+    tis_rating: Int
+    tis_sector: String
+    twitter: String
+    type: String
+    website: String
+}
+
+"aggregate min on columns"
+type impact_organisation_min_fields {
+    abn: bigint
+    acnc_id: String
+    acnc_url: String
+    address: String
+    benefits: String
+    country: String
+    data_checked_date: date
+    deductible_gift_recipient: String
+    email: String
+    email_service: String
+    estab_year: Int
+    facebook: String
+    fin_year_end: String
+    glass_door: String
+    google_review_rating: String
+    gov_diversity_statement: String
+    gov_donate_statement: String
+    gov_funding_use: String
+    gov_impact_statement: String
+    gov_statement: String
+    helps_who: String
+    keywords: String
+    last_reported_total_revenue: numeric
+    linkedin: String
+    logo_url: String
+    name: String
+    operates_aus: String
+    operates_os: String
+    operates_where: String
+    org_id: bigint
+    org_size: String
+    phone: String
+    postcode: String
+    postcodeold: Int
+    published: Int
+    purpose: String
+    reported_last: date
+    reported_next: date
+    state: String
+    suburb: String
+    summary: String
+    tis_gov_impact: Int
+    tis_gov_people: Int
+    tis_gov_process: Int
+    tis_gov_purpose: Int
+    tis_gov_review: Int
+    tis_liquidity_rating: Int
+    tis_lotus: Int
+    tis_lotus_impact: Int
+    tis_lotus_people: Int
+    tis_lotus_process: Int
+    tis_lotus_purpose: Int
+    tis_lotus_review: Int
+    tis_rating: Int
+    tis_sector: String
+    twitter: String
+    type: String
+    website: String
+}
+
+"response of any mutation on the table \"impact.organisation\""
+type impact_organisation_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [impact_organisation!]!
+}
+
+"aggregate stddev on columns"
+type impact_organisation_stddev_fields {
+    abn: Float
+    estab_year: Float
+    last_reported_total_revenue: Float
+    org_id: Float
+    postcodeold: Float
+    published: Float
+    tis_gov_impact: Float
+    tis_gov_people: Float
+    tis_gov_process: Float
+    tis_gov_purpose: Float
+    tis_gov_review: Float
+    tis_liquidity_rating: Float
+    tis_lotus: Float
+    tis_lotus_impact: Float
+    tis_lotus_people: Float
+    tis_lotus_process: Float
+    tis_lotus_purpose: Float
+    tis_lotus_review: Float
+    tis_rating: Float
+}
+
+"aggregate stddev_pop on columns"
+type impact_organisation_stddev_pop_fields {
+    abn: Float
+    estab_year: Float
+    last_reported_total_revenue: Float
+    org_id: Float
+    postcodeold: Float
+    published: Float
+    tis_gov_impact: Float
+    tis_gov_people: Float
+    tis_gov_process: Float
+    tis_gov_purpose: Float
+    tis_gov_review: Float
+    tis_liquidity_rating: Float
+    tis_lotus: Float
+    tis_lotus_impact: Float
+    tis_lotus_people: Float
+    tis_lotus_process: Float
+    tis_lotus_purpose: Float
+    tis_lotus_review: Float
+    tis_rating: Float
+}
+
+"aggregate stddev_samp on columns"
+type impact_organisation_stddev_samp_fields {
+    abn: Float
+    estab_year: Float
+    last_reported_total_revenue: Float
+    org_id: Float
+    postcodeold: Float
+    published: Float
+    tis_gov_impact: Float
+    tis_gov_people: Float
+    tis_gov_process: Float
+    tis_gov_purpose: Float
+    tis_gov_review: Float
+    tis_liquidity_rating: Float
+    tis_lotus: Float
+    tis_lotus_impact: Float
+    tis_lotus_people: Float
+    tis_lotus_process: Float
+    tis_lotus_purpose: Float
+    tis_lotus_review: Float
+    tis_rating: Float
+}
+
+"aggregate sum on columns"
+type impact_organisation_sum_fields {
+    abn: bigint
+    estab_year: Int
+    last_reported_total_revenue: numeric
+    org_id: bigint
+    postcodeold: Int
+    published: Int
+    tis_gov_impact: Int
+    tis_gov_people: Int
+    tis_gov_process: Int
+    tis_gov_purpose: Int
+    tis_gov_review: Int
+    tis_liquidity_rating: Int
+    tis_lotus: Int
+    tis_lotus_impact: Int
+    tis_lotus_people: Int
+    tis_lotus_process: Int
+    tis_lotus_purpose: Int
+    tis_lotus_review: Int
+    tis_rating: Int
+}
+
+"aggregate var_pop on columns"
+type impact_organisation_var_pop_fields {
+    abn: Float
+    estab_year: Float
+    last_reported_total_revenue: Float
+    org_id: Float
+    postcodeold: Float
+    published: Float
+    tis_gov_impact: Float
+    tis_gov_people: Float
+    tis_gov_process: Float
+    tis_gov_purpose: Float
+    tis_gov_review: Float
+    tis_liquidity_rating: Float
+    tis_lotus: Float
+    tis_lotus_impact: Float
+    tis_lotus_people: Float
+    tis_lotus_process: Float
+    tis_lotus_purpose: Float
+    tis_lotus_review: Float
+    tis_rating: Float
+}
+
+"aggregate var_samp on columns"
+type impact_organisation_var_samp_fields {
+    abn: Float
+    estab_year: Float
+    last_reported_total_revenue: Float
+    org_id: Float
+    postcodeold: Float
+    published: Float
+    tis_gov_impact: Float
+    tis_gov_people: Float
+    tis_gov_process: Float
+    tis_gov_purpose: Float
+    tis_gov_review: Float
+    tis_liquidity_rating: Float
+    tis_lotus: Float
+    tis_lotus_impact: Float
+    tis_lotus_people: Float
+    tis_lotus_process: Float
+    tis_lotus_purpose: Float
+    tis_lotus_review: Float
+    tis_rating: Float
+}
+
+"aggregate variance on columns"
+type impact_organisation_variance_fields {
+    abn: Float
+    estab_year: Float
+    last_reported_total_revenue: Float
+    org_id: Float
+    postcodeold: Float
+    published: Float
+    tis_gov_impact: Float
+    tis_gov_people: Float
+    tis_gov_process: Float
+    tis_gov_purpose: Float
+    tis_gov_review: Float
+    tis_liquidity_rating: Float
+    tis_lotus: Float
+    tis_lotus_impact: Float
+    tis_lotus_people: Float
+    tis_lotus_process: Float
+    tis_lotus_purpose: Float
+    tis_lotus_review: Float
+    tis_rating: Float
+}
+
+"columns and relationships of \"impact.people\""
+type impact_people {
+    acnc_id: String
+    acnc_url: String
+    first_name: String
+    gender: bpchar
+    guid: String
+    last_name: String
+    linkedin_url: String
+    middle_name: String
+    name: String!
+    "An array relationship"
+    org_people(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): [impact_org_people!]!
+    "An aggregated array relationship"
+    org_people_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): impact_org_people_aggregate!
+    person_id: bigint!
+}
+
+"aggregated selection of \"impact.people\""
+type impact_people_aggregate {
+    aggregate: impact_people_aggregate_fields
+    nodes: [impact_people!]!
+}
+
+"aggregate fields of \"impact.people\""
+type impact_people_aggregate_fields {
+    avg: impact_people_avg_fields
+    count(columns: [impact_people_select_column!], distinct: Boolean): Int
+    max: impact_people_max_fields
+    min: impact_people_min_fields
+    stddev: impact_people_stddev_fields
+    stddev_pop: impact_people_stddev_pop_fields
+    stddev_samp: impact_people_stddev_samp_fields
+    sum: impact_people_sum_fields
+    var_pop: impact_people_var_pop_fields
+    var_samp: impact_people_var_samp_fields
+    variance: impact_people_variance_fields
+}
+
+"aggregate avg on columns"
+type impact_people_avg_fields {
+    person_id: Float
+}
+
+"aggregate max on columns"
+type impact_people_max_fields {
+    acnc_id: String
+    acnc_url: String
+    first_name: String
+    guid: String
+    last_name: String
+    linkedin_url: String
+    middle_name: String
+    name: String
+    person_id: bigint
+}
+
+"aggregate min on columns"
+type impact_people_min_fields {
+    acnc_id: String
+    acnc_url: String
+    first_name: String
+    guid: String
+    last_name: String
+    linkedin_url: String
+    middle_name: String
+    name: String
+    person_id: bigint
+}
+
+"response of any mutation on the table \"impact.people\""
+type impact_people_mutation_response {
+    "number of affected rows by the mutation"
+    affected_rows: Int!
+    "data of the affected rows by the mutation"
+    returning: [impact_people!]!
+}
+
+"aggregate stddev on columns"
+type impact_people_stddev_fields {
+    person_id: Float
+}
+
+"aggregate stddev_pop on columns"
+type impact_people_stddev_pop_fields {
+    person_id: Float
+}
+
+"aggregate stddev_samp on columns"
+type impact_people_stddev_samp_fields {
+    person_id: Float
+}
+
+"aggregate sum on columns"
+type impact_people_sum_fields {
+    person_id: bigint
+}
+
+"aggregate var_pop on columns"
+type impact_people_var_pop_fields {
+    person_id: Float
+}
+
+"aggregate var_samp on columns"
+type impact_people_var_samp_fields {
+    person_id: Float
+}
+
+"aggregate variance on columns"
+type impact_people_variance_fields {
+    person_id: Float
+}
+
+"mutation root"
+type mutation_root {
+    "delete data from the table: \"impact.annual_statement\""
+    delete_impact_annual_statement(
+        "filter the rows which have to be deleted"
+        where: impact_annual_statement_bool_exp!
+    ): impact_annual_statement_mutation_response
+    "delete data from the table: \"impact.document\""
+    delete_impact_document(
+        "filter the rows which have to be deleted"
+        where: impact_document_bool_exp!
+    ): impact_document_mutation_response
+    "delete data from the table: \"impact.org_people\""
+    delete_impact_org_people(
+        "filter the rows which have to be deleted"
+        where: impact_org_people_bool_exp!
+    ): impact_org_people_mutation_response
+    "delete data from the table: \"impact.organisation\""
+    delete_impact_organisation(
+        "filter the rows which have to be deleted"
+        where: impact_organisation_bool_exp!
+    ): impact_organisation_mutation_response
+    "delete data from the table: \"impact.people\""
+    delete_impact_people(
+        "filter the rows which have to be deleted"
+        where: impact_people_bool_exp!
+    ): impact_people_mutation_response
+    "insert data into the table: \"impact.annual_statement\""
+    insert_impact_annual_statement(
+        "the rows to be inserted"
+        objects: [impact_annual_statement_insert_input!]!,
+        "on conflict condition"
+        on_conflict: impact_annual_statement_on_conflict
+    ): impact_annual_statement_mutation_response
+    "insert data into the table: \"impact.document\""
+    insert_impact_document(
+        "the rows to be inserted"
+        objects: [impact_document_insert_input!]!,
+        "on conflict condition"
+        on_conflict: impact_document_on_conflict
+    ): impact_document_mutation_response
+    "insert data into the table: \"impact.org_people\""
+    insert_impact_org_people(
+        "the rows to be inserted"
+        objects: [impact_org_people_insert_input!]!
+    ): impact_org_people_mutation_response
+    "insert data into the table: \"impact.organisation\""
+    insert_impact_organisation(
+        "the rows to be inserted"
+        objects: [impact_organisation_insert_input!]!,
+        "on conflict condition"
+        on_conflict: impact_organisation_on_conflict
+    ): impact_organisation_mutation_response
+    "insert data into the table: \"impact.people\""
+    insert_impact_people(
+        "the rows to be inserted"
+        objects: [impact_people_insert_input!]!,
+        "on conflict condition"
+        on_conflict: impact_people_on_conflict
+    ): impact_people_mutation_response
+    "update data of the table: \"impact.annual_statement\""
+    update_impact_annual_statement(
+        "increments the integer columns with given value of the filtered values"
+        _inc: impact_annual_statement_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: impact_annual_statement_set_input,
+        "filter the rows which have to be updated"
+        where: impact_annual_statement_bool_exp!
+    ): impact_annual_statement_mutation_response
+    "update data of the table: \"impact.document\""
+    update_impact_document(
+        "increments the integer columns with given value of the filtered values"
+        _inc: impact_document_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: impact_document_set_input,
+        "filter the rows which have to be updated"
+        where: impact_document_bool_exp!
+    ): impact_document_mutation_response
+    "update data of the table: \"impact.org_people\""
+    update_impact_org_people(
+        "increments the integer columns with given value of the filtered values"
+        _inc: impact_org_people_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: impact_org_people_set_input,
+        "filter the rows which have to be updated"
+        where: impact_org_people_bool_exp!
+    ): impact_org_people_mutation_response
+    "update data of the table: \"impact.organisation\""
+    update_impact_organisation(
+        "increments the integer columns with given value of the filtered values"
+        _inc: impact_organisation_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: impact_organisation_set_input,
+        "filter the rows which have to be updated"
+        where: impact_organisation_bool_exp!
+    ): impact_organisation_mutation_response
+    "update data of the table: \"impact.people\""
+    update_impact_people(
+        "increments the integer columns with given value of the filtered values"
+        _inc: impact_people_inc_input,
+        "sets the columns of the filtered rows to the given values"
+        _set: impact_people_set_input,
+        "filter the rows which have to be updated"
+        where: impact_people_bool_exp!
+    ): impact_people_mutation_response
+}
+
+"query root"
+type query_root {
+    "fetch data from the table: \"impact.annual_statement\""
+    impact_annual_statement(
+        "distinct select on columns"
+        distinct_on: [impact_annual_statement_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_annual_statement_order_by!],
+        "filter the rows returned"
+        where: impact_annual_statement_bool_exp
+    ): [impact_annual_statement!]!
+    "fetch aggregated fields from the table: \"impact.annual_statement\""
+    impact_annual_statement_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_annual_statement_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_annual_statement_order_by!],
+        "filter the rows returned"
+        where: impact_annual_statement_bool_exp
+    ): impact_annual_statement_aggregate!
+    "fetch data from the table: \"impact.annual_statement\" using primary key columns"
+    impact_annual_statement_by_pk(annual_statement_id: Int!): impact_annual_statement
+    "fetch data from the table: \"impact.document\""
+    impact_document(
+        "distinct select on columns"
+        distinct_on: [impact_document_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_document_order_by!],
+        "filter the rows returned"
+        where: impact_document_bool_exp
+    ): [impact_document!]!
+    "fetch aggregated fields from the table: \"impact.document\""
+    impact_document_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_document_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_document_order_by!],
+        "filter the rows returned"
+        where: impact_document_bool_exp
+    ): impact_document_aggregate!
+    "fetch data from the table: \"impact.document\" using primary key columns"
+    impact_document_by_pk(doc_id: bigint!): impact_document
+    "fetch data from the table: \"impact.org_people\""
+    impact_org_people(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): [impact_org_people!]!
+    "fetch aggregated fields from the table: \"impact.org_people\""
+    impact_org_people_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): impact_org_people_aggregate!
+    "fetch data from the table: \"impact.organisation\""
+    impact_organisation(
+        "distinct select on columns"
+        distinct_on: [impact_organisation_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_organisation_order_by!],
+        "filter the rows returned"
+        where: impact_organisation_bool_exp
+    ): [impact_organisation!]!
+    "fetch aggregated fields from the table: \"impact.organisation\""
+    impact_organisation_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_organisation_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_organisation_order_by!],
+        "filter the rows returned"
+        where: impact_organisation_bool_exp
+    ): impact_organisation_aggregate!
+    "fetch data from the table: \"impact.organisation\" using primary key columns"
+    impact_organisation_by_pk(org_id: bigint!): impact_organisation
+    "fetch data from the table: \"impact.people\""
+    impact_people(
+        "distinct select on columns"
+        distinct_on: [impact_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_people_order_by!],
+        "filter the rows returned"
+        where: impact_people_bool_exp
+    ): [impact_people!]!
+    "fetch aggregated fields from the table: \"impact.people\""
+    impact_people_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_people_order_by!],
+        "filter the rows returned"
+        where: impact_people_bool_exp
+    ): impact_people_aggregate!
+    "fetch data from the table: \"impact.people\" using primary key columns"
+    impact_people_by_pk(person_id: bigint!): impact_people
+}
+
+"subscription root"
+type subscription_root {
+    "fetch data from the table: \"impact.annual_statement\""
+    impact_annual_statement(
+        "distinct select on columns"
+        distinct_on: [impact_annual_statement_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_annual_statement_order_by!],
+        "filter the rows returned"
+        where: impact_annual_statement_bool_exp
+    ): [impact_annual_statement!]!
+    "fetch aggregated fields from the table: \"impact.annual_statement\""
+    impact_annual_statement_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_annual_statement_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_annual_statement_order_by!],
+        "filter the rows returned"
+        where: impact_annual_statement_bool_exp
+    ): impact_annual_statement_aggregate!
+    "fetch data from the table: \"impact.annual_statement\" using primary key columns"
+    impact_annual_statement_by_pk(annual_statement_id: Int!): impact_annual_statement
+    "fetch data from the table: \"impact.document\""
+    impact_document(
+        "distinct select on columns"
+        distinct_on: [impact_document_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_document_order_by!],
+        "filter the rows returned"
+        where: impact_document_bool_exp
+    ): [impact_document!]!
+    "fetch aggregated fields from the table: \"impact.document\""
+    impact_document_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_document_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_document_order_by!],
+        "filter the rows returned"
+        where: impact_document_bool_exp
+    ): impact_document_aggregate!
+    "fetch data from the table: \"impact.document\" using primary key columns"
+    impact_document_by_pk(doc_id: bigint!): impact_document
+    "fetch data from the table: \"impact.org_people\""
+    impact_org_people(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): [impact_org_people!]!
+    "fetch aggregated fields from the table: \"impact.org_people\""
+    impact_org_people_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_org_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_org_people_order_by!],
+        "filter the rows returned"
+        where: impact_org_people_bool_exp
+    ): impact_org_people_aggregate!
+    "fetch data from the table: \"impact.organisation\""
+    impact_organisation(
+        "distinct select on columns"
+        distinct_on: [impact_organisation_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_organisation_order_by!],
+        "filter the rows returned"
+        where: impact_organisation_bool_exp
+    ): [impact_organisation!]!
+    "fetch aggregated fields from the table: \"impact.organisation\""
+    impact_organisation_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_organisation_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_organisation_order_by!],
+        "filter the rows returned"
+        where: impact_organisation_bool_exp
+    ): impact_organisation_aggregate!
+    "fetch data from the table: \"impact.organisation\" using primary key columns"
+    impact_organisation_by_pk(org_id: bigint!): impact_organisation
+    "fetch data from the table: \"impact.people\""
+    impact_people(
+        "distinct select on columns"
+        distinct_on: [impact_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_people_order_by!],
+        "filter the rows returned"
+        where: impact_people_bool_exp
+    ): [impact_people!]!
+    "fetch aggregated fields from the table: \"impact.people\""
+    impact_people_aggregate(
+        "distinct select on columns"
+        distinct_on: [impact_people_select_column!],
+        "limit the number of rows returned"
+        limit: Int,
+        "skip the first n rows. Use only with order_by"
+        offset: Int,
+        "sort the rows by one or more columns"
+        order_by: [impact_people_order_by!],
+        "filter the rows returned"
+        where: impact_people_bool_exp
+    ): impact_people_aggregate!
+    "fetch data from the table: \"impact.people\" using primary key columns"
+    impact_people_by_pk(person_id: bigint!): impact_people
+}
+
+"unique or primary key constraints on table \"impact.annual_statement\""
+enum impact_annual_statement_constraint {
+    "unique or primary key constraint"
+    annual_statement_pkey
+}
+
+"select columns of table \"impact.annual_statement\""
+enum impact_annual_statement_select_column {
+    "column name"
+    abn
+    "column name"
+    aboriginal_or_tsi
+    "column name"
+    adults_25_to_65
+    "column name"
+    adults_65_and_over
+    "column name"
+    ais_due_date
+    "column name"
+    all_other_expenses
+    "column name"
+    all_other_revenue
+    "column name"
+    annual_statement_id
+    "column name"
+    basic_religious_charity
+    "column name"
+    cash_or_accrual
+    "column name"
+    category
+    "column name"
+    charity_name
+    "column name"
+    charity_size
+    "column name"
+    children_6_to_under_15
+    "column name"
+    conducted_activities
+    "column name"
+    country
+    "column name"
+    date_ais_received
+    "column name"
+    description_of_purposes_change_if_applicable
+    "column name"
+    donations_and_bequests
+    "column name"
+    due_date
+    "column name"
+    early_childhood_under_6
+    "column name"
+    employee_expenses
+    "column name"
+    fin_report_from
+    "column name"
+    fin_report_to
+    "column name"
+    financial_report_date_received
+    "column name"
+    funded_by_ndis
+    "column name"
+    grants_and_donations_made_for_use_in_australia
+    "column name"
+    grants_and_donations_made_for_use_outside_australia
+    "column name"
+    how_purposes_were_pursued
+    "column name"
+    intend_to_provide_ndis
+    "column name"
+    interest_expenses
+    "column name"
+    main_activity
+    "column name"
+    main_beneficiaries
+    "column name"
+    net_assets_liabilities
+    "column name"
+    net_surplus_deficit
+    "column name"
+    non_current_loans_payable
+    "column name"
+    non_current_loans_receivable
+    "column name"
+    operates_in_act
+    "column name"
+    operates_in_nsw
+    "column name"
+    operates_in_nt
+    "column name"
+    operates_in_qld
+    "column name"
+    operates_in_sa
+    "column name"
+    operates_in_tas
+    "column name"
+    operates_in_vic
+    "column name"
+    operates_in_wa
+    "column name"
+    operates_overseas
+    "column name"
+    operating_countries
+    "column name"
+    org_id
+    "column name"
+    other_activities_description
+    "column name"
+    other_activity
+    "column name"
+    other_beneficiaries_description
+    "column name"
+    other_beneficiaries_not_listed
+    "column name"
+    other_comprehensive_income
+    "column name"
+    other_income
+    "column name"
+    other_non_current_assets
+    "column name"
+    other_non_current_liabilities
+    "column name"
+    postcode
+    "column name"
+    received_date
+    "column name"
+    registration_status
+    "column name"
+    report_consolidated_with_more_than_one_entity
+    "column name"
+    revenue_from_goods_and_services
+    "column name"
+    revenue_from_government
+    "column name"
+    revenue_from_investments
+    "column name"
+    staff_casual
+    "column name"
+    staff_full_time
+    "column name"
+    staff_part_time
+    "column name"
+    staff_volunteers
+    "column name"
+    state
+    "column name"
+    total_assets
+    "column name"
+    total_comprehensive_income
+    "column name"
+    total_current_assets
+    "column name"
+    total_current_liabilities
+    "column name"
+    total_expenses
+    "column name"
+    total_full_time_equivalent_staff
+    "column name"
+    total_gross_income
+    "column name"
+    total_liabilities
+    "column name"
+    total_non_current_assets
+    "column name"
+    total_non_current_liabilities
+    "column name"
+    total_revenue
+    "column name"
+    town_city
+    "column name"
+    type_of_financial_statement
+    "column name"
+    why_charity_did_not_conduct_activities
+    "column name"
+    will_purposes_change_in_the_next_financial_year
+    "column name"
+    year
+    "column name"
+    youth_15_to_u25
+}
+
+"update columns of table \"impact.annual_statement\""
+enum impact_annual_statement_update_column {
+    "column name"
+    abn
+    "column name"
+    aboriginal_or_tsi
+    "column name"
+    adults_25_to_65
+    "column name"
+    adults_65_and_over
+    "column name"
+    ais_due_date
+    "column name"
+    all_other_expenses
+    "column name"
+    all_other_revenue
+    "column name"
+    annual_statement_id
+    "column name"
+    basic_religious_charity
+    "column name"
+    cash_or_accrual
+    "column name"
+    category
+    "column name"
+    charity_name
+    "column name"
+    charity_size
+    "column name"
+    children_6_to_under_15
+    "column name"
+    conducted_activities
+    "column name"
+    country
+    "column name"
+    date_ais_received
+    "column name"
+    description_of_purposes_change_if_applicable
+    "column name"
+    donations_and_bequests
+    "column name"
+    due_date
+    "column name"
+    early_childhood_under_6
+    "column name"
+    employee_expenses
+    "column name"
+    fin_report_from
+    "column name"
+    fin_report_to
+    "column name"
+    financial_report_date_received
+    "column name"
+    funded_by_ndis
+    "column name"
+    grants_and_donations_made_for_use_in_australia
+    "column name"
+    grants_and_donations_made_for_use_outside_australia
+    "column name"
+    how_purposes_were_pursued
+    "column name"
+    intend_to_provide_ndis
+    "column name"
+    interest_expenses
+    "column name"
+    main_activity
+    "column name"
+    main_beneficiaries
+    "column name"
+    net_assets_liabilities
+    "column name"
+    net_surplus_deficit
+    "column name"
+    non_current_loans_payable
+    "column name"
+    non_current_loans_receivable
+    "column name"
+    operates_in_act
+    "column name"
+    operates_in_nsw
+    "column name"
+    operates_in_nt
+    "column name"
+    operates_in_qld
+    "column name"
+    operates_in_sa
+    "column name"
+    operates_in_tas
+    "column name"
+    operates_in_vic
+    "column name"
+    operates_in_wa
+    "column name"
+    operates_overseas
+    "column name"
+    operating_countries
+    "column name"
+    org_id
+    "column name"
+    other_activities_description
+    "column name"
+    other_activity
+    "column name"
+    other_beneficiaries_description
+    "column name"
+    other_beneficiaries_not_listed
+    "column name"
+    other_comprehensive_income
+    "column name"
+    other_income
+    "column name"
+    other_non_current_assets
+    "column name"
+    other_non_current_liabilities
+    "column name"
+    postcode
+    "column name"
+    received_date
+    "column name"
+    registration_status
+    "column name"
+    report_consolidated_with_more_than_one_entity
+    "column name"
+    revenue_from_goods_and_services
+    "column name"
+    revenue_from_government
+    "column name"
+    revenue_from_investments
+    "column name"
+    staff_casual
+    "column name"
+    staff_full_time
+    "column name"
+    staff_part_time
+    "column name"
+    staff_volunteers
+    "column name"
+    state
+    "column name"
+    total_assets
+    "column name"
+    total_comprehensive_income
+    "column name"
+    total_current_assets
+    "column name"
+    total_current_liabilities
+    "column name"
+    total_expenses
+    "column name"
+    total_full_time_equivalent_staff
+    "column name"
+    total_gross_income
+    "column name"
+    total_liabilities
+    "column name"
+    total_non_current_assets
+    "column name"
+    total_non_current_liabilities
+    "column name"
+    total_revenue
+    "column name"
+    town_city
+    "column name"
+    type_of_financial_statement
+    "column name"
+    why_charity_did_not_conduct_activities
+    "column name"
+    will_purposes_change_in_the_next_financial_year
+    "column name"
+    year
+    "column name"
+    youth_15_to_u25
+}
+
+"unique or primary key constraints on table \"impact.document\""
+enum impact_document_constraint {
+    "unique or primary key constraint"
+    document_pkey
+}
+
+"select columns of table \"impact.document\""
+enum impact_document_select_column {
+    "column name"
+    created_at
+    "column name"
+    date_received
+    "column name"
+    doc_id
+    "column name"
+    due_date
+    "column name"
+    org_id
+    "column name"
+    title
+    "column name"
+    updated_at
+    "column name"
+    url
+}
+
+"update columns of table \"impact.document\""
+enum impact_document_update_column {
+    "column name"
+    created_at
+    "column name"
+    date_received
+    "column name"
+    doc_id
+    "column name"
+    due_date
+    "column name"
+    org_id
+    "column name"
+    title
+    "column name"
+    updated_at
+    "column name"
+    url
+}
+
+"select columns of table \"impact.org_people\""
+enum impact_org_people_select_column {
+    "column name"
+    org_id
+    "column name"
+    org_person_id
+    "column name"
+    person_id
+    "column name"
+    position
+}
+
+"unique or primary key constraints on table \"impact.organisation\""
+enum impact_organisation_constraint {
+    "unique or primary key constraint"
+    organisation_abn_key
+    "unique or primary key constraint"
+    organisation_pkey
+}
+
+"select columns of table \"impact.organisation\""
+enum impact_organisation_select_column {
+    "column name"
+    abn
+    "column name"
+    acnc_id
+    "column name"
+    acnc_url
+    "column name"
+    address
+    "column name"
+    benefits
+    "column name"
+    country
+    "column name"
+    data_checked_date
+    "column name"
+    deductible_gift_recipient
+    "column name"
+    email
+    "column name"
+    email_service
+    "column name"
+    estab_year
+    "column name"
+    facebook
+    "column name"
+    fin_year_end
+    "column name"
+    glass_door
+    "column name"
+    google_review_rating
+    "column name"
+    gov_diversity_statement
+    "column name"
+    gov_donate_statement
+    "column name"
+    gov_funding_use
+    "column name"
+    gov_impact_statement
+    "column name"
+    gov_statement
+    "column name"
+    helps_who
+    "column name"
+    keywords
+    "column name"
+    last_reported_total_revenue
+    "column name"
+    linkedin
+    "column name"
+    logo_url
+    "column name"
+    name
+    "column name"
+    operates_aus
+    "column name"
+    operates_os
+    "column name"
+    operates_where
+    "column name"
+    org_id
+    "column name"
+    org_size
+    "column name"
+    phone
+    "column name"
+    postcode
+    "column name"
+    postcodeold
+    "column name"
+    published
+    "column name"
+    purpose
+    "column name"
+    reported_last
+    "column name"
+    reported_next
+    "column name"
+    state
+    "column name"
+    suburb
+    "column name"
+    summary
+    "column name"
+    tis_gov_impact
+    "column name"
+    tis_gov_people
+    "column name"
+    tis_gov_process
+    "column name"
+    tis_gov_purpose
+    "column name"
+    tis_gov_review
+    "column name"
+    tis_liquidity_rating
+    "column name"
+    tis_lotus
+    "column name"
+    tis_lotus_impact
+    "column name"
+    tis_lotus_people
+    "column name"
+    tis_lotus_process
+    "column name"
+    tis_lotus_purpose
+    "column name"
+    tis_lotus_review
+    "column name"
+    tis_rating
+    "column name"
+    tis_sector
+    "column name"
+    twitter
+    "column name"
+    type
+    "column name"
+    website
+}
+
+"update columns of table \"impact.organisation\""
+enum impact_organisation_update_column {
+    "column name"
+    abn
+    "column name"
+    acnc_id
+    "column name"
+    acnc_url
+    "column name"
+    address
+    "column name"
+    benefits
+    "column name"
+    country
+    "column name"
+    data_checked_date
+    "column name"
+    deductible_gift_recipient
+    "column name"
+    email
+    "column name"
+    email_service
+    "column name"
+    estab_year
+    "column name"
+    facebook
+    "column name"
+    fin_year_end
+    "column name"
+    glass_door
+    "column name"
+    google_review_rating
+    "column name"
+    gov_diversity_statement
+    "column name"
+    gov_donate_statement
+    "column name"
+    gov_funding_use
+    "column name"
+    gov_impact_statement
+    "column name"
+    gov_statement
+    "column name"
+    helps_who
+    "column name"
+    keywords
+    "column name"
+    last_reported_total_revenue
+    "column name"
+    linkedin
+    "column name"
+    logo_url
+    "column name"
+    name
+    "column name"
+    operates_aus
+    "column name"
+    operates_os
+    "column name"
+    operates_where
+    "column name"
+    org_id
+    "column name"
+    org_size
+    "column name"
+    phone
+    "column name"
+    postcode
+    "column name"
+    postcodeold
+    "column name"
+    published
+    "column name"
+    purpose
+    "column name"
+    reported_last
+    "column name"
+    reported_next
+    "column name"
+    state
+    "column name"
+    suburb
+    "column name"
+    summary
+    "column name"
+    tis_gov_impact
+    "column name"
+    tis_gov_people
+    "column name"
+    tis_gov_process
+    "column name"
+    tis_gov_purpose
+    "column name"
+    tis_gov_review
+    "column name"
+    tis_liquidity_rating
+    "column name"
+    tis_lotus
+    "column name"
+    tis_lotus_impact
+    "column name"
+    tis_lotus_people
+    "column name"
+    tis_lotus_process
+    "column name"
+    tis_lotus_purpose
+    "column name"
+    tis_lotus_review
+    "column name"
+    tis_rating
+    "column name"
+    tis_sector
+    "column name"
+    twitter
+    "column name"
+    type
+    "column name"
+    website
+}
+
+"unique or primary key constraints on table \"impact.people\""
+enum impact_people_constraint {
+    "unique or primary key constraint"
+    people_pkey
+}
+
+"select columns of table \"impact.people\""
+enum impact_people_select_column {
+    "column name"
+    acnc_id
+    "column name"
+    acnc_url
+    "column name"
+    first_name
+    "column name"
+    gender
+    "column name"
+    guid
+    "column name"
+    last_name
+    "column name"
+    linkedin_url
+    "column name"
+    middle_name
+    "column name"
+    name
+    "column name"
+    person_id
+}
+
+"update columns of table \"impact.people\""
+enum impact_people_update_column {
+    "column name"
+    acnc_id
+    "column name"
+    acnc_url
+    "column name"
+    first_name
+    "column name"
+    gender
+    "column name"
+    guid
+    "column name"
+    last_name
+    "column name"
+    linkedin_url
+    "column name"
+    middle_name
+    "column name"
+    name
+    "column name"
+    person_id
+}
+
+"column ordering options"
+enum order_by {
+    "in the ascending order, nulls last"
+    asc
+    "in the ascending order, nulls first"
+    asc_nulls_first
+    "in the ascending order, nulls last"
+    asc_nulls_last
+    "in the descending order, nulls first"
+    desc
+    "in the descending order, nulls first"
+    desc_nulls_first
+    "in the descending order, nulls last"
+    desc_nulls_last
+}
+
+"expression to compare columns of type Int. All fields are combined with logical 'AND'."
+input Int_comparison_exp {
+    _eq: Int
+    _gt: Int
+    _gte: Int
+    _in: [Int!]
+    _is_null: Boolean
+    _lt: Int
+    _lte: Int
+    _neq: Int
+    _nin: [Int!]
+}
+
+"expression to compare columns of type String. All fields are combined with logical 'AND'."
+input String_comparison_exp {
+    _eq: String
+    _gt: String
+    _gte: String
+    _ilike: String
+    _in: [String!]
+    _is_null: Boolean
+    _like: String
+    _lt: String
+    _lte: String
+    _neq: String
+    _nilike: String
+    _nin: [String!]
+    _nlike: String
+    _nsimilar: String
+    _similar: String
+}
+
+"expression to compare columns of type bigint. All fields are combined with logical 'AND'."
+input bigint_comparison_exp {
+    _eq: bigint
+    _gt: bigint
+    _gte: bigint
+    _in: [bigint!]
+    _is_null: Boolean
+    _lt: bigint
+    _lte: bigint
+    _neq: bigint
+    _nin: [bigint!]
+}
+
+"expression to compare columns of type bpchar. All fields are combined with logical 'AND'."
+input bpchar_comparison_exp {
+    _eq: bpchar
+    _gt: bpchar
+    _gte: bpchar
+    _in: [bpchar!]
+    _is_null: Boolean
+    _lt: bpchar
+    _lte: bpchar
+    _neq: bpchar
+    _nin: [bpchar!]
+}
+
+"expression to compare columns of type date. All fields are combined with logical 'AND'."
+input date_comparison_exp {
+    _eq: date
+    _gt: date
+    _gte: date
+    _in: [date!]
+    _is_null: Boolean
+    _lt: date
+    _lte: date
+    _neq: date
+    _nin: [date!]
+}
+
+"order by aggregate values of table \"impact.annual_statement\""
+input impact_annual_statement_aggregate_order_by {
+    avg: impact_annual_statement_avg_order_by
+    count: order_by
+    max: impact_annual_statement_max_order_by
+    min: impact_annual_statement_min_order_by
+    stddev: impact_annual_statement_stddev_order_by
+    stddev_pop: impact_annual_statement_stddev_pop_order_by
+    stddev_samp: impact_annual_statement_stddev_samp_order_by
+    sum: impact_annual_statement_sum_order_by
+    var_pop: impact_annual_statement_var_pop_order_by
+    var_samp: impact_annual_statement_var_samp_order_by
+    variance: impact_annual_statement_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"impact.annual_statement\""
+input impact_annual_statement_arr_rel_insert_input {
+    data: [impact_annual_statement_insert_input!]!
+    on_conflict: impact_annual_statement_on_conflict
+}
+
+"order by avg() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_avg_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"Boolean expression to filter rows from the table \"impact.annual_statement\". All fields are combined with a logical 'AND'."
+input impact_annual_statement_bool_exp {
+    _and: [impact_annual_statement_bool_exp]
+    _not: impact_annual_statement_bool_exp
+    _or: [impact_annual_statement_bool_exp]
+    abn: bigint_comparison_exp
+    aboriginal_or_tsi: String_comparison_exp
+    adults_25_to_65: String_comparison_exp
+    adults_65_and_over: String_comparison_exp
+    ais_due_date: String_comparison_exp
+    all_other_expenses: Int_comparison_exp
+    all_other_revenue: Int_comparison_exp
+    annual_statement_id: Int_comparison_exp
+    basic_religious_charity: String_comparison_exp
+    cash_or_accrual: String_comparison_exp
+    category: String_comparison_exp
+    charity_name: String_comparison_exp
+    charity_size: String_comparison_exp
+    children_6_to_under_15: String_comparison_exp
+    conducted_activities: String_comparison_exp
+    country: String_comparison_exp
+    date_ais_received: String_comparison_exp
+    description_of_purposes_change_if_applicable: String_comparison_exp
+    donations_and_bequests: Int_comparison_exp
+    due_date: date_comparison_exp
+    early_childhood_under_6: String_comparison_exp
+    employee_expenses: Int_comparison_exp
+    fin_report_from: timestamp_comparison_exp
+    fin_report_to: String_comparison_exp
+    financial_report_date_received: String_comparison_exp
+    funded_by_ndis: String_comparison_exp
+    grants_and_donations_made_for_use_in_australia: Int_comparison_exp
+    grants_and_donations_made_for_use_outside_australia: Int_comparison_exp
+    how_purposes_were_pursued: String_comparison_exp
+    intend_to_provide_ndis: String_comparison_exp
+    interest_expenses: Int_comparison_exp
+    main_activity: String_comparison_exp
+    main_beneficiaries: String_comparison_exp
+    net_assets_liabilities: Int_comparison_exp
+    net_surplus_deficit: Int_comparison_exp
+    non_current_loans_payable: Int_comparison_exp
+    non_current_loans_receivable: Int_comparison_exp
+    operates_in_act: String_comparison_exp
+    operates_in_nsw: String_comparison_exp
+    operates_in_nt: String_comparison_exp
+    operates_in_qld: String_comparison_exp
+    operates_in_sa: String_comparison_exp
+    operates_in_tas: String_comparison_exp
+    operates_in_vic: String_comparison_exp
+    operates_in_wa: String_comparison_exp
+    operates_overseas: String_comparison_exp
+    operating_countries: String_comparison_exp
+    org_id: bigint_comparison_exp
+    organisation: impact_organisation_bool_exp
+    other_activities_description: String_comparison_exp
+    other_activity: String_comparison_exp
+    other_beneficiaries_description: String_comparison_exp
+    other_beneficiaries_not_listed: String_comparison_exp
+    other_comprehensive_income: Int_comparison_exp
+    other_income: Int_comparison_exp
+    other_non_current_assets: Int_comparison_exp
+    other_non_current_liabilities: Int_comparison_exp
+    postcode: Int_comparison_exp
+    received_date: date_comparison_exp
+    registration_status: String_comparison_exp
+    report_consolidated_with_more_than_one_entity: String_comparison_exp
+    revenue_from_goods_and_services: String_comparison_exp
+    revenue_from_government: Int_comparison_exp
+    revenue_from_investments: String_comparison_exp
+    staff_casual: Int_comparison_exp
+    staff_full_time: Int_comparison_exp
+    staff_part_time: Int_comparison_exp
+    staff_volunteers: String_comparison_exp
+    state: String_comparison_exp
+    total_assets: Int_comparison_exp
+    total_comprehensive_income: String_comparison_exp
+    total_current_assets: Int_comparison_exp
+    total_current_liabilities: Int_comparison_exp
+    total_expenses: Int_comparison_exp
+    total_full_time_equivalent_staff: Int_comparison_exp
+    total_gross_income: Int_comparison_exp
+    total_liabilities: Int_comparison_exp
+    total_non_current_assets: Int_comparison_exp
+    total_non_current_liabilities: Int_comparison_exp
+    total_revenue: Int_comparison_exp
+    town_city: String_comparison_exp
+    type_of_financial_statement: String_comparison_exp
+    why_charity_did_not_conduct_activities: String_comparison_exp
+    will_purposes_change_in_the_next_financial_year: String_comparison_exp
+    year: Int_comparison_exp
+    youth_15_to_u25: String_comparison_exp
+}
+
+"input type for incrementing integer columne in table \"impact.annual_statement\""
+input impact_annual_statement_inc_input {
+    abn: bigint
+    all_other_expenses: Int
+    all_other_revenue: Int
+    annual_statement_id: Int
+    donations_and_bequests: Int
+    employee_expenses: Int
+    grants_and_donations_made_for_use_in_australia: Int
+    grants_and_donations_made_for_use_outside_australia: Int
+    interest_expenses: Int
+    net_assets_liabilities: Int
+    net_surplus_deficit: Int
+    non_current_loans_payable: Int
+    non_current_loans_receivable: Int
+    org_id: bigint
+    other_comprehensive_income: Int
+    other_income: Int
+    other_non_current_assets: Int
+    other_non_current_liabilities: Int
+    postcode: Int
+    revenue_from_government: Int
+    staff_casual: Int
+    staff_full_time: Int
+    staff_part_time: Int
+    total_assets: Int
+    total_current_assets: Int
+    total_current_liabilities: Int
+    total_expenses: Int
+    total_full_time_equivalent_staff: Int
+    total_gross_income: Int
+    total_liabilities: Int
+    total_non_current_assets: Int
+    total_non_current_liabilities: Int
+    total_revenue: Int
+    year: Int
+}
+
+"input type for inserting data into table \"impact.annual_statement\""
+input impact_annual_statement_insert_input {
+    abn: bigint
+    aboriginal_or_tsi: String
+    adults_25_to_65: String
+    adults_65_and_over: String
+    ais_due_date: String
+    all_other_expenses: Int
+    all_other_revenue: Int
+    annual_statement_id: Int
+    basic_religious_charity: String
+    cash_or_accrual: String
+    category: String
+    charity_name: String
+    charity_size: String
+    children_6_to_under_15: String
+    conducted_activities: String
+    country: String
+    date_ais_received: String
+    description_of_purposes_change_if_applicable: String
+    donations_and_bequests: Int
+    due_date: date
+    early_childhood_under_6: String
+    employee_expenses: Int
+    fin_report_from: timestamp
+    fin_report_to: String
+    financial_report_date_received: String
+    funded_by_ndis: String
+    grants_and_donations_made_for_use_in_australia: Int
+    grants_and_donations_made_for_use_outside_australia: Int
+    how_purposes_were_pursued: String
+    intend_to_provide_ndis: String
+    interest_expenses: Int
+    main_activity: String
+    main_beneficiaries: String
+    net_assets_liabilities: Int
+    net_surplus_deficit: Int
+    non_current_loans_payable: Int
+    non_current_loans_receivable: Int
+    operates_in_act: String
+    operates_in_nsw: String
+    operates_in_nt: String
+    operates_in_qld: String
+    operates_in_sa: String
+    operates_in_tas: String
+    operates_in_vic: String
+    operates_in_wa: String
+    operates_overseas: String
+    operating_countries: String
+    org_id: bigint
+    organisation: impact_organisation_obj_rel_insert_input
+    other_activities_description: String
+    other_activity: String
+    other_beneficiaries_description: String
+    other_beneficiaries_not_listed: String
+    other_comprehensive_income: Int
+    other_income: Int
+    other_non_current_assets: Int
+    other_non_current_liabilities: Int
+    postcode: Int
+    received_date: date
+    registration_status: String
+    report_consolidated_with_more_than_one_entity: String
+    revenue_from_goods_and_services: String
+    revenue_from_government: Int
+    revenue_from_investments: String
+    staff_casual: Int
+    staff_full_time: Int
+    staff_part_time: Int
+    staff_volunteers: String
+    state: String
+    total_assets: Int
+    total_comprehensive_income: String
+    total_current_assets: Int
+    total_current_liabilities: Int
+    total_expenses: Int
+    total_full_time_equivalent_staff: Int
+    total_gross_income: Int
+    total_liabilities: Int
+    total_non_current_assets: Int
+    total_non_current_liabilities: Int
+    total_revenue: Int
+    town_city: String
+    type_of_financial_statement: String
+    why_charity_did_not_conduct_activities: String
+    will_purposes_change_in_the_next_financial_year: String
+    year: Int
+    youth_15_to_u25: String
+}
+
+"order by max() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_max_order_by {
+    abn: order_by
+    aboriginal_or_tsi: order_by
+    adults_25_to_65: order_by
+    adults_65_and_over: order_by
+    ais_due_date: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    basic_religious_charity: order_by
+    cash_or_accrual: order_by
+    category: order_by
+    charity_name: order_by
+    charity_size: order_by
+    children_6_to_under_15: order_by
+    conducted_activities: order_by
+    country: order_by
+    date_ais_received: order_by
+    description_of_purposes_change_if_applicable: order_by
+    donations_and_bequests: order_by
+    due_date: order_by
+    early_childhood_under_6: order_by
+    employee_expenses: order_by
+    fin_report_to: order_by
+    financial_report_date_received: order_by
+    funded_by_ndis: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    how_purposes_were_pursued: order_by
+    intend_to_provide_ndis: order_by
+    interest_expenses: order_by
+    main_activity: order_by
+    main_beneficiaries: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    operates_in_act: order_by
+    operates_in_nsw: order_by
+    operates_in_nt: order_by
+    operates_in_qld: order_by
+    operates_in_sa: order_by
+    operates_in_tas: order_by
+    operates_in_vic: order_by
+    operates_in_wa: order_by
+    operates_overseas: order_by
+    operating_countries: order_by
+    org_id: order_by
+    other_activities_description: order_by
+    other_activity: order_by
+    other_beneficiaries_description: order_by
+    other_beneficiaries_not_listed: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    received_date: order_by
+    registration_status: order_by
+    report_consolidated_with_more_than_one_entity: order_by
+    revenue_from_goods_and_services: order_by
+    revenue_from_government: order_by
+    revenue_from_investments: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    staff_volunteers: order_by
+    state: order_by
+    total_assets: order_by
+    total_comprehensive_income: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    town_city: order_by
+    type_of_financial_statement: order_by
+    why_charity_did_not_conduct_activities: order_by
+    will_purposes_change_in_the_next_financial_year: order_by
+    year: order_by
+    youth_15_to_u25: order_by
+}
+
+"order by min() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_min_order_by {
+    abn: order_by
+    aboriginal_or_tsi: order_by
+    adults_25_to_65: order_by
+    adults_65_and_over: order_by
+    ais_due_date: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    basic_religious_charity: order_by
+    cash_or_accrual: order_by
+    category: order_by
+    charity_name: order_by
+    charity_size: order_by
+    children_6_to_under_15: order_by
+    conducted_activities: order_by
+    country: order_by
+    date_ais_received: order_by
+    description_of_purposes_change_if_applicable: order_by
+    donations_and_bequests: order_by
+    due_date: order_by
+    early_childhood_under_6: order_by
+    employee_expenses: order_by
+    fin_report_to: order_by
+    financial_report_date_received: order_by
+    funded_by_ndis: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    how_purposes_were_pursued: order_by
+    intend_to_provide_ndis: order_by
+    interest_expenses: order_by
+    main_activity: order_by
+    main_beneficiaries: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    operates_in_act: order_by
+    operates_in_nsw: order_by
+    operates_in_nt: order_by
+    operates_in_qld: order_by
+    operates_in_sa: order_by
+    operates_in_tas: order_by
+    operates_in_vic: order_by
+    operates_in_wa: order_by
+    operates_overseas: order_by
+    operating_countries: order_by
+    org_id: order_by
+    other_activities_description: order_by
+    other_activity: order_by
+    other_beneficiaries_description: order_by
+    other_beneficiaries_not_listed: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    received_date: order_by
+    registration_status: order_by
+    report_consolidated_with_more_than_one_entity: order_by
+    revenue_from_goods_and_services: order_by
+    revenue_from_government: order_by
+    revenue_from_investments: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    staff_volunteers: order_by
+    state: order_by
+    total_assets: order_by
+    total_comprehensive_income: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    town_city: order_by
+    type_of_financial_statement: order_by
+    why_charity_did_not_conduct_activities: order_by
+    will_purposes_change_in_the_next_financial_year: order_by
+    year: order_by
+    youth_15_to_u25: order_by
+}
+
+"input type for inserting object relation for remote table \"impact.annual_statement\""
+input impact_annual_statement_obj_rel_insert_input {
+    data: impact_annual_statement_insert_input!
+    on_conflict: impact_annual_statement_on_conflict
+}
+
+"on conflict condition type for table \"impact.annual_statement\""
+input impact_annual_statement_on_conflict {
+    constraint: impact_annual_statement_constraint!
+    update_columns: [impact_annual_statement_update_column!]!
+    where: impact_annual_statement_bool_exp
+}
+
+"ordering options when selecting data from \"impact.annual_statement\""
+input impact_annual_statement_order_by {
+    abn: order_by
+    aboriginal_or_tsi: order_by
+    adults_25_to_65: order_by
+    adults_65_and_over: order_by
+    ais_due_date: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    basic_religious_charity: order_by
+    cash_or_accrual: order_by
+    category: order_by
+    charity_name: order_by
+    charity_size: order_by
+    children_6_to_under_15: order_by
+    conducted_activities: order_by
+    country: order_by
+    date_ais_received: order_by
+    description_of_purposes_change_if_applicable: order_by
+    donations_and_bequests: order_by
+    due_date: order_by
+    early_childhood_under_6: order_by
+    employee_expenses: order_by
+    fin_report_from: order_by
+    fin_report_to: order_by
+    financial_report_date_received: order_by
+    funded_by_ndis: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    how_purposes_were_pursued: order_by
+    intend_to_provide_ndis: order_by
+    interest_expenses: order_by
+    main_activity: order_by
+    main_beneficiaries: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    operates_in_act: order_by
+    operates_in_nsw: order_by
+    operates_in_nt: order_by
+    operates_in_qld: order_by
+    operates_in_sa: order_by
+    operates_in_tas: order_by
+    operates_in_vic: order_by
+    operates_in_wa: order_by
+    operates_overseas: order_by
+    operating_countries: order_by
+    org_id: order_by
+    organisation: impact_organisation_order_by
+    other_activities_description: order_by
+    other_activity: order_by
+    other_beneficiaries_description: order_by
+    other_beneficiaries_not_listed: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    received_date: order_by
+    registration_status: order_by
+    report_consolidated_with_more_than_one_entity: order_by
+    revenue_from_goods_and_services: order_by
+    revenue_from_government: order_by
+    revenue_from_investments: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    staff_volunteers: order_by
+    state: order_by
+    total_assets: order_by
+    total_comprehensive_income: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    town_city: order_by
+    type_of_financial_statement: order_by
+    why_charity_did_not_conduct_activities: order_by
+    will_purposes_change_in_the_next_financial_year: order_by
+    year: order_by
+    youth_15_to_u25: order_by
+}
+
+"input type for updating data in table \"impact.annual_statement\""
+input impact_annual_statement_set_input {
+    abn: bigint
+    aboriginal_or_tsi: String
+    adults_25_to_65: String
+    adults_65_and_over: String
+    ais_due_date: String
+    all_other_expenses: Int
+    all_other_revenue: Int
+    annual_statement_id: Int
+    basic_religious_charity: String
+    cash_or_accrual: String
+    category: String
+    charity_name: String
+    charity_size: String
+    children_6_to_under_15: String
+    conducted_activities: String
+    country: String
+    date_ais_received: String
+    description_of_purposes_change_if_applicable: String
+    donations_and_bequests: Int
+    due_date: date
+    early_childhood_under_6: String
+    employee_expenses: Int
+    fin_report_from: timestamp
+    fin_report_to: String
+    financial_report_date_received: String
+    funded_by_ndis: String
+    grants_and_donations_made_for_use_in_australia: Int
+    grants_and_donations_made_for_use_outside_australia: Int
+    how_purposes_were_pursued: String
+    intend_to_provide_ndis: String
+    interest_expenses: Int
+    main_activity: String
+    main_beneficiaries: String
+    net_assets_liabilities: Int
+    net_surplus_deficit: Int
+    non_current_loans_payable: Int
+    non_current_loans_receivable: Int
+    operates_in_act: String
+    operates_in_nsw: String
+    operates_in_nt: String
+    operates_in_qld: String
+    operates_in_sa: String
+    operates_in_tas: String
+    operates_in_vic: String
+    operates_in_wa: String
+    operates_overseas: String
+    operating_countries: String
+    org_id: bigint
+    other_activities_description: String
+    other_activity: String
+    other_beneficiaries_description: String
+    other_beneficiaries_not_listed: String
+    other_comprehensive_income: Int
+    other_income: Int
+    other_non_current_assets: Int
+    other_non_current_liabilities: Int
+    postcode: Int
+    received_date: date
+    registration_status: String
+    report_consolidated_with_more_than_one_entity: String
+    revenue_from_goods_and_services: String
+    revenue_from_government: Int
+    revenue_from_investments: String
+    staff_casual: Int
+    staff_full_time: Int
+    staff_part_time: Int
+    staff_volunteers: String
+    state: String
+    total_assets: Int
+    total_comprehensive_income: String
+    total_current_assets: Int
+    total_current_liabilities: Int
+    total_expenses: Int
+    total_full_time_equivalent_staff: Int
+    total_gross_income: Int
+    total_liabilities: Int
+    total_non_current_assets: Int
+    total_non_current_liabilities: Int
+    total_revenue: Int
+    town_city: String
+    type_of_financial_statement: String
+    why_charity_did_not_conduct_activities: String
+    will_purposes_change_in_the_next_financial_year: String
+    year: Int
+    youth_15_to_u25: String
+}
+
+"order by stddev() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_stddev_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"order by stddev_pop() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_stddev_pop_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"order by stddev_samp() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_stddev_samp_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"order by sum() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_sum_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"order by var_pop() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_var_pop_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"order by var_samp() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_var_samp_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"order by variance() on columns of table \"impact.annual_statement\""
+input impact_annual_statement_variance_order_by {
+    abn: order_by
+    all_other_expenses: order_by
+    all_other_revenue: order_by
+    annual_statement_id: order_by
+    donations_and_bequests: order_by
+    employee_expenses: order_by
+    grants_and_donations_made_for_use_in_australia: order_by
+    grants_and_donations_made_for_use_outside_australia: order_by
+    interest_expenses: order_by
+    net_assets_liabilities: order_by
+    net_surplus_deficit: order_by
+    non_current_loans_payable: order_by
+    non_current_loans_receivable: order_by
+    org_id: order_by
+    other_comprehensive_income: order_by
+    other_income: order_by
+    other_non_current_assets: order_by
+    other_non_current_liabilities: order_by
+    postcode: order_by
+    revenue_from_government: order_by
+    staff_casual: order_by
+    staff_full_time: order_by
+    staff_part_time: order_by
+    total_assets: order_by
+    total_current_assets: order_by
+    total_current_liabilities: order_by
+    total_expenses: order_by
+    total_full_time_equivalent_staff: order_by
+    total_gross_income: order_by
+    total_liabilities: order_by
+    total_non_current_assets: order_by
+    total_non_current_liabilities: order_by
+    total_revenue: order_by
+    year: order_by
+}
+
+"order by aggregate values of table \"impact.document\""
+input impact_document_aggregate_order_by {
+    avg: impact_document_avg_order_by
+    count: order_by
+    max: impact_document_max_order_by
+    min: impact_document_min_order_by
+    stddev: impact_document_stddev_order_by
+    stddev_pop: impact_document_stddev_pop_order_by
+    stddev_samp: impact_document_stddev_samp_order_by
+    sum: impact_document_sum_order_by
+    var_pop: impact_document_var_pop_order_by
+    var_samp: impact_document_var_samp_order_by
+    variance: impact_document_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"impact.document\""
+input impact_document_arr_rel_insert_input {
+    data: [impact_document_insert_input!]!
+    on_conflict: impact_document_on_conflict
+}
+
+"order by avg() on columns of table \"impact.document\""
+input impact_document_avg_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"Boolean expression to filter rows from the table \"impact.document\". All fields are combined with a logical 'AND'."
+input impact_document_bool_exp {
+    _and: [impact_document_bool_exp]
+    _not: impact_document_bool_exp
+    _or: [impact_document_bool_exp]
+    created_at: timestamptz_comparison_exp
+    date_received: date_comparison_exp
+    doc_id: bigint_comparison_exp
+    due_date: date_comparison_exp
+    org_id: bigint_comparison_exp
+    organisation: impact_organisation_bool_exp
+    title: String_comparison_exp
+    updated_at: timestamptz_comparison_exp
+    url: String_comparison_exp
+}
+
+"input type for incrementing integer columne in table \"impact.document\""
+input impact_document_inc_input {
+    doc_id: bigint
+    org_id: bigint
+}
+
+"input type for inserting data into table \"impact.document\""
+input impact_document_insert_input {
+    created_at: timestamptz
+    date_received: date
+    doc_id: bigint
+    due_date: date
+    org_id: bigint
+    organisation: impact_organisation_obj_rel_insert_input
+    title: String
+    updated_at: timestamptz
+    url: String
+}
+
+"order by max() on columns of table \"impact.document\""
+input impact_document_max_order_by {
+    created_at: order_by
+    date_received: order_by
+    doc_id: order_by
+    due_date: order_by
+    org_id: order_by
+    title: order_by
+    updated_at: order_by
+    url: order_by
+}
+
+"order by min() on columns of table \"impact.document\""
+input impact_document_min_order_by {
+    created_at: order_by
+    date_received: order_by
+    doc_id: order_by
+    due_date: order_by
+    org_id: order_by
+    title: order_by
+    updated_at: order_by
+    url: order_by
+}
+
+"input type for inserting object relation for remote table \"impact.document\""
+input impact_document_obj_rel_insert_input {
+    data: impact_document_insert_input!
+    on_conflict: impact_document_on_conflict
+}
+
+"on conflict condition type for table \"impact.document\""
+input impact_document_on_conflict {
+    constraint: impact_document_constraint!
+    update_columns: [impact_document_update_column!]!
+    where: impact_document_bool_exp
+}
+
+"ordering options when selecting data from \"impact.document\""
+input impact_document_order_by {
+    created_at: order_by
+    date_received: order_by
+    doc_id: order_by
+    due_date: order_by
+    org_id: order_by
+    organisation: impact_organisation_order_by
+    title: order_by
+    updated_at: order_by
+    url: order_by
+}
+
+"input type for updating data in table \"impact.document\""
+input impact_document_set_input {
+    created_at: timestamptz
+    date_received: date
+    doc_id: bigint
+    due_date: date
+    org_id: bigint
+    title: String
+    updated_at: timestamptz
+    url: String
+}
+
+"order by stddev() on columns of table \"impact.document\""
+input impact_document_stddev_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"order by stddev_pop() on columns of table \"impact.document\""
+input impact_document_stddev_pop_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"order by stddev_samp() on columns of table \"impact.document\""
+input impact_document_stddev_samp_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"order by sum() on columns of table \"impact.document\""
+input impact_document_sum_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"order by var_pop() on columns of table \"impact.document\""
+input impact_document_var_pop_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"order by var_samp() on columns of table \"impact.document\""
+input impact_document_var_samp_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"order by variance() on columns of table \"impact.document\""
+input impact_document_variance_order_by {
+    doc_id: order_by
+    org_id: order_by
+}
+
+"order by aggregate values of table \"impact.org_people\""
+input impact_org_people_aggregate_order_by {
+    avg: impact_org_people_avg_order_by
+    count: order_by
+    max: impact_org_people_max_order_by
+    min: impact_org_people_min_order_by
+    stddev: impact_org_people_stddev_order_by
+    stddev_pop: impact_org_people_stddev_pop_order_by
+    stddev_samp: impact_org_people_stddev_samp_order_by
+    sum: impact_org_people_sum_order_by
+    var_pop: impact_org_people_var_pop_order_by
+    var_samp: impact_org_people_var_samp_order_by
+    variance: impact_org_people_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"impact.org_people\""
+input impact_org_people_arr_rel_insert_input {
+    data: [impact_org_people_insert_input!]!
+}
+
+"order by avg() on columns of table \"impact.org_people\""
+input impact_org_people_avg_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"Boolean expression to filter rows from the table \"impact.org_people\". All fields are combined with a logical 'AND'."
+input impact_org_people_bool_exp {
+    _and: [impact_org_people_bool_exp]
+    _not: impact_org_people_bool_exp
+    _or: [impact_org_people_bool_exp]
+    org_id: bigint_comparison_exp
+    org_person_id: bigint_comparison_exp
+    organisation: impact_organisation_bool_exp
+    person: impact_people_bool_exp
+    person_id: bigint_comparison_exp
+    position: String_comparison_exp
+}
+
+"input type for incrementing integer columne in table \"impact.org_people\""
+input impact_org_people_inc_input {
+    org_id: bigint
+    org_person_id: bigint
+    person_id: bigint
+}
+
+"input type for inserting data into table \"impact.org_people\""
+input impact_org_people_insert_input {
+    org_id: bigint
+    org_person_id: bigint
+    organisation: impact_organisation_obj_rel_insert_input
+    person: impact_people_obj_rel_insert_input
+    person_id: bigint
+    position: String
+}
+
+"order by max() on columns of table \"impact.org_people\""
+input impact_org_people_max_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+    position: order_by
+}
+
+"order by min() on columns of table \"impact.org_people\""
+input impact_org_people_min_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+    position: order_by
+}
+
+"input type for inserting object relation for remote table \"impact.org_people\""
+input impact_org_people_obj_rel_insert_input {
+    data: impact_org_people_insert_input!
+}
+
+"ordering options when selecting data from \"impact.org_people\""
+input impact_org_people_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    organisation: impact_organisation_order_by
+    person: impact_people_order_by
+    person_id: order_by
+    position: order_by
+}
+
+"input type for updating data in table \"impact.org_people\""
+input impact_org_people_set_input {
+    org_id: bigint
+    org_person_id: bigint
+    person_id: bigint
+    position: String
+}
+
+"order by stddev() on columns of table \"impact.org_people\""
+input impact_org_people_stddev_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"order by stddev_pop() on columns of table \"impact.org_people\""
+input impact_org_people_stddev_pop_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"order by stddev_samp() on columns of table \"impact.org_people\""
+input impact_org_people_stddev_samp_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"order by sum() on columns of table \"impact.org_people\""
+input impact_org_people_sum_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"order by var_pop() on columns of table \"impact.org_people\""
+input impact_org_people_var_pop_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"order by var_samp() on columns of table \"impact.org_people\""
+input impact_org_people_var_samp_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"order by variance() on columns of table \"impact.org_people\""
+input impact_org_people_variance_order_by {
+    org_id: order_by
+    org_person_id: order_by
+    person_id: order_by
+}
+
+"order by aggregate values of table \"impact.organisation\""
+input impact_organisation_aggregate_order_by {
+    avg: impact_organisation_avg_order_by
+    count: order_by
+    max: impact_organisation_max_order_by
+    min: impact_organisation_min_order_by
+    stddev: impact_organisation_stddev_order_by
+    stddev_pop: impact_organisation_stddev_pop_order_by
+    stddev_samp: impact_organisation_stddev_samp_order_by
+    sum: impact_organisation_sum_order_by
+    var_pop: impact_organisation_var_pop_order_by
+    var_samp: impact_organisation_var_samp_order_by
+    variance: impact_organisation_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"impact.organisation\""
+input impact_organisation_arr_rel_insert_input {
+    data: [impact_organisation_insert_input!]!
+    on_conflict: impact_organisation_on_conflict
+}
+
+"order by avg() on columns of table \"impact.organisation\""
+input impact_organisation_avg_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"Boolean expression to filter rows from the table \"impact.organisation\". All fields are combined with a logical 'AND'."
+input impact_organisation_bool_exp {
+    _and: [impact_organisation_bool_exp]
+    _not: impact_organisation_bool_exp
+    _or: [impact_organisation_bool_exp]
+    abn: bigint_comparison_exp
+    acnc_id: String_comparison_exp
+    acnc_url: String_comparison_exp
+    address: String_comparison_exp
+    annual_statements: impact_annual_statement_bool_exp
+    benefits: String_comparison_exp
+    country: String_comparison_exp
+    data_checked_date: date_comparison_exp
+    deductible_gift_recipient: String_comparison_exp
+    documents: impact_document_bool_exp
+    email: String_comparison_exp
+    email_service: String_comparison_exp
+    estab_year: Int_comparison_exp
+    facebook: String_comparison_exp
+    fin_year_end: String_comparison_exp
+    glass_door: String_comparison_exp
+    google_review_rating: String_comparison_exp
+    gov_diversity_statement: String_comparison_exp
+    gov_donate_statement: String_comparison_exp
+    gov_funding_use: String_comparison_exp
+    gov_impact_statement: String_comparison_exp
+    gov_statement: String_comparison_exp
+    helps_who: String_comparison_exp
+    keywords: String_comparison_exp
+    last_reported_total_revenue: numeric_comparison_exp
+    linkedin: String_comparison_exp
+    logo_url: String_comparison_exp
+    name: String_comparison_exp
+    operates_aus: String_comparison_exp
+    operates_os: String_comparison_exp
+    operates_where: String_comparison_exp
+    org_id: bigint_comparison_exp
+    org_people: impact_org_people_bool_exp
+    org_size: String_comparison_exp
+    phone: String_comparison_exp
+    postcode: String_comparison_exp
+    postcodeold: Int_comparison_exp
+    published: Int_comparison_exp
+    purpose: String_comparison_exp
+    reported_last: date_comparison_exp
+    reported_next: date_comparison_exp
+    state: String_comparison_exp
+    suburb: String_comparison_exp
+    summary: String_comparison_exp
+    tis_gov_impact: Int_comparison_exp
+    tis_gov_people: Int_comparison_exp
+    tis_gov_process: Int_comparison_exp
+    tis_gov_purpose: Int_comparison_exp
+    tis_gov_review: Int_comparison_exp
+    tis_liquidity_rating: Int_comparison_exp
+    tis_lotus: Int_comparison_exp
+    tis_lotus_impact: Int_comparison_exp
+    tis_lotus_people: Int_comparison_exp
+    tis_lotus_process: Int_comparison_exp
+    tis_lotus_purpose: Int_comparison_exp
+    tis_lotus_review: Int_comparison_exp
+    tis_rating: Int_comparison_exp
+    tis_sector: String_comparison_exp
+    twitter: String_comparison_exp
+    type: String_comparison_exp
+    website: String_comparison_exp
+}
+
+"input type for incrementing integer columne in table \"impact.organisation\""
+input impact_organisation_inc_input {
+    abn: bigint
+    estab_year: Int
+    org_id: bigint
+    postcodeold: Int
+    published: Int
+    tis_gov_impact: Int
+    tis_gov_people: Int
+    tis_gov_process: Int
+    tis_gov_purpose: Int
+    tis_gov_review: Int
+    tis_liquidity_rating: Int
+    tis_lotus: Int
+    tis_lotus_impact: Int
+    tis_lotus_people: Int
+    tis_lotus_process: Int
+    tis_lotus_purpose: Int
+    tis_lotus_review: Int
+    tis_rating: Int
+}
+
+"input type for inserting data into table \"impact.organisation\""
+input impact_organisation_insert_input {
+    abn: bigint
+    acnc_id: String
+    acnc_url: String
+    address: String
+    annual_statements: impact_annual_statement_arr_rel_insert_input
+    benefits: String
+    country: String
+    data_checked_date: date
+    deductible_gift_recipient: String
+    documents: impact_document_arr_rel_insert_input
+    email: String
+    email_service: String
+    estab_year: Int
+    facebook: String
+    fin_year_end: String
+    glass_door: String
+    google_review_rating: String
+    gov_diversity_statement: String
+    gov_donate_statement: String
+    gov_funding_use: String
+    gov_impact_statement: String
+    gov_statement: String
+    helps_who: String
+    keywords: String
+    last_reported_total_revenue: numeric
+    linkedin: String
+    logo_url: String
+    name: String
+    operates_aus: String
+    operates_os: String
+    operates_where: String
+    org_id: bigint
+    org_people: impact_org_people_arr_rel_insert_input
+    org_size: String
+    phone: String
+    postcode: String
+    postcodeold: Int
+    published: Int
+    purpose: String
+    reported_last: date
+    reported_next: date
+    state: String
+    suburb: String
+    summary: String
+    tis_gov_impact: Int
+    tis_gov_people: Int
+    tis_gov_process: Int
+    tis_gov_purpose: Int
+    tis_gov_review: Int
+    tis_liquidity_rating: Int
+    tis_lotus: Int
+    tis_lotus_impact: Int
+    tis_lotus_people: Int
+    tis_lotus_process: Int
+    tis_lotus_purpose: Int
+    tis_lotus_review: Int
+    tis_rating: Int
+    tis_sector: String
+    twitter: String
+    type: String
+    website: String
+}
+
+"order by max() on columns of table \"impact.organisation\""
+input impact_organisation_max_order_by {
+    abn: order_by
+    acnc_id: order_by
+    acnc_url: order_by
+    address: order_by
+    benefits: order_by
+    country: order_by
+    data_checked_date: order_by
+    deductible_gift_recipient: order_by
+    email: order_by
+    email_service: order_by
+    estab_year: order_by
+    facebook: order_by
+    fin_year_end: order_by
+    glass_door: order_by
+    google_review_rating: order_by
+    gov_diversity_statement: order_by
+    gov_donate_statement: order_by
+    gov_funding_use: order_by
+    gov_impact_statement: order_by
+    gov_statement: order_by
+    helps_who: order_by
+    keywords: order_by
+    last_reported_total_revenue: order_by
+    linkedin: order_by
+    logo_url: order_by
+    name: order_by
+    operates_aus: order_by
+    operates_os: order_by
+    operates_where: order_by
+    org_id: order_by
+    org_size: order_by
+    phone: order_by
+    postcode: order_by
+    postcodeold: order_by
+    published: order_by
+    purpose: order_by
+    reported_last: order_by
+    reported_next: order_by
+    state: order_by
+    suburb: order_by
+    summary: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+    tis_sector: order_by
+    twitter: order_by
+    type: order_by
+    website: order_by
+}
+
+"order by min() on columns of table \"impact.organisation\""
+input impact_organisation_min_order_by {
+    abn: order_by
+    acnc_id: order_by
+    acnc_url: order_by
+    address: order_by
+    benefits: order_by
+    country: order_by
+    data_checked_date: order_by
+    deductible_gift_recipient: order_by
+    email: order_by
+    email_service: order_by
+    estab_year: order_by
+    facebook: order_by
+    fin_year_end: order_by
+    glass_door: order_by
+    google_review_rating: order_by
+    gov_diversity_statement: order_by
+    gov_donate_statement: order_by
+    gov_funding_use: order_by
+    gov_impact_statement: order_by
+    gov_statement: order_by
+    helps_who: order_by
+    keywords: order_by
+    last_reported_total_revenue: order_by
+    linkedin: order_by
+    logo_url: order_by
+    name: order_by
+    operates_aus: order_by
+    operates_os: order_by
+    operates_where: order_by
+    org_id: order_by
+    org_size: order_by
+    phone: order_by
+    postcode: order_by
+    postcodeold: order_by
+    published: order_by
+    purpose: order_by
+    reported_last: order_by
+    reported_next: order_by
+    state: order_by
+    suburb: order_by
+    summary: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+    tis_sector: order_by
+    twitter: order_by
+    type: order_by
+    website: order_by
+}
+
+"input type for inserting object relation for remote table \"impact.organisation\""
+input impact_organisation_obj_rel_insert_input {
+    data: impact_organisation_insert_input!
+    on_conflict: impact_organisation_on_conflict
+}
+
+"on conflict condition type for table \"impact.organisation\""
+input impact_organisation_on_conflict {
+    constraint: impact_organisation_constraint!
+    update_columns: [impact_organisation_update_column!]!
+    where: impact_organisation_bool_exp
+}
+
+"ordering options when selecting data from \"impact.organisation\""
+input impact_organisation_order_by {
+    abn: order_by
+    acnc_id: order_by
+    acnc_url: order_by
+    address: order_by
+    annual_statements_aggregate: impact_annual_statement_aggregate_order_by
+    benefits: order_by
+    country: order_by
+    data_checked_date: order_by
+    deductible_gift_recipient: order_by
+    documents_aggregate: impact_document_aggregate_order_by
+    email: order_by
+    email_service: order_by
+    estab_year: order_by
+    facebook: order_by
+    fin_year_end: order_by
+    glass_door: order_by
+    google_review_rating: order_by
+    gov_diversity_statement: order_by
+    gov_donate_statement: order_by
+    gov_funding_use: order_by
+    gov_impact_statement: order_by
+    gov_statement: order_by
+    helps_who: order_by
+    keywords: order_by
+    last_reported_total_revenue: order_by
+    linkedin: order_by
+    logo_url: order_by
+    name: order_by
+    operates_aus: order_by
+    operates_os: order_by
+    operates_where: order_by
+    org_id: order_by
+    org_people_aggregate: impact_org_people_aggregate_order_by
+    org_size: order_by
+    phone: order_by
+    postcode: order_by
+    postcodeold: order_by
+    published: order_by
+    purpose: order_by
+    reported_last: order_by
+    reported_next: order_by
+    state: order_by
+    suburb: order_by
+    summary: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+    tis_sector: order_by
+    twitter: order_by
+    type: order_by
+    website: order_by
+}
+
+"input type for updating data in table \"impact.organisation\""
+input impact_organisation_set_input {
+    abn: bigint
+    acnc_id: String
+    acnc_url: String
+    address: String
+    benefits: String
+    country: String
+    data_checked_date: date
+    deductible_gift_recipient: String
+    email: String
+    email_service: String
+    estab_year: Int
+    facebook: String
+    fin_year_end: String
+    glass_door: String
+    google_review_rating: String
+    gov_diversity_statement: String
+    gov_donate_statement: String
+    gov_funding_use: String
+    gov_impact_statement: String
+    gov_statement: String
+    helps_who: String
+    keywords: String
+    last_reported_total_revenue: numeric
+    linkedin: String
+    logo_url: String
+    name: String
+    operates_aus: String
+    operates_os: String
+    operates_where: String
+    org_id: bigint
+    org_size: String
+    phone: String
+    postcode: String
+    postcodeold: Int
+    published: Int
+    purpose: String
+    reported_last: date
+    reported_next: date
+    state: String
+    suburb: String
+    summary: String
+    tis_gov_impact: Int
+    tis_gov_people: Int
+    tis_gov_process: Int
+    tis_gov_purpose: Int
+    tis_gov_review: Int
+    tis_liquidity_rating: Int
+    tis_lotus: Int
+    tis_lotus_impact: Int
+    tis_lotus_people: Int
+    tis_lotus_process: Int
+    tis_lotus_purpose: Int
+    tis_lotus_review: Int
+    tis_rating: Int
+    tis_sector: String
+    twitter: String
+    type: String
+    website: String
+}
+
+"order by stddev() on columns of table \"impact.organisation\""
+input impact_organisation_stddev_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"order by stddev_pop() on columns of table \"impact.organisation\""
+input impact_organisation_stddev_pop_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"order by stddev_samp() on columns of table \"impact.organisation\""
+input impact_organisation_stddev_samp_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"order by sum() on columns of table \"impact.organisation\""
+input impact_organisation_sum_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"order by var_pop() on columns of table \"impact.organisation\""
+input impact_organisation_var_pop_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"order by var_samp() on columns of table \"impact.organisation\""
+input impact_organisation_var_samp_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"order by variance() on columns of table \"impact.organisation\""
+input impact_organisation_variance_order_by {
+    abn: order_by
+    estab_year: order_by
+    last_reported_total_revenue: order_by
+    org_id: order_by
+    postcodeold: order_by
+    published: order_by
+    tis_gov_impact: order_by
+    tis_gov_people: order_by
+    tis_gov_process: order_by
+    tis_gov_purpose: order_by
+    tis_gov_review: order_by
+    tis_liquidity_rating: order_by
+    tis_lotus: order_by
+    tis_lotus_impact: order_by
+    tis_lotus_people: order_by
+    tis_lotus_process: order_by
+    tis_lotus_purpose: order_by
+    tis_lotus_review: order_by
+    tis_rating: order_by
+}
+
+"order by aggregate values of table \"impact.people\""
+input impact_people_aggregate_order_by {
+    avg: impact_people_avg_order_by
+    count: order_by
+    max: impact_people_max_order_by
+    min: impact_people_min_order_by
+    stddev: impact_people_stddev_order_by
+    stddev_pop: impact_people_stddev_pop_order_by
+    stddev_samp: impact_people_stddev_samp_order_by
+    sum: impact_people_sum_order_by
+    var_pop: impact_people_var_pop_order_by
+    var_samp: impact_people_var_samp_order_by
+    variance: impact_people_variance_order_by
+}
+
+"input type for inserting array relation for remote table \"impact.people\""
+input impact_people_arr_rel_insert_input {
+    data: [impact_people_insert_input!]!
+    on_conflict: impact_people_on_conflict
+}
+
+"order by avg() on columns of table \"impact.people\""
+input impact_people_avg_order_by {
+    person_id: order_by
+}
+
+"Boolean expression to filter rows from the table \"impact.people\". All fields are combined with a logical 'AND'."
+input impact_people_bool_exp {
+    _and: [impact_people_bool_exp]
+    _not: impact_people_bool_exp
+    _or: [impact_people_bool_exp]
+    acnc_id: String_comparison_exp
+    acnc_url: String_comparison_exp
+    first_name: String_comparison_exp
+    gender: bpchar_comparison_exp
+    guid: String_comparison_exp
+    last_name: String_comparison_exp
+    linkedin_url: String_comparison_exp
+    middle_name: String_comparison_exp
+    name: String_comparison_exp
+    org_people: impact_org_people_bool_exp
+    person_id: bigint_comparison_exp
+}
+
+"input type for incrementing integer columne in table \"impact.people\""
+input impact_people_inc_input {
+    person_id: bigint
+}
+
+"input type for inserting data into table \"impact.people\""
+input impact_people_insert_input {
+    acnc_id: String
+    acnc_url: String
+    first_name: String
+    gender: bpchar
+    guid: String
+    last_name: String
+    linkedin_url: String
+    middle_name: String
+    name: String
+    org_people: impact_org_people_arr_rel_insert_input
+    person_id: bigint
+}
+
+"order by max() on columns of table \"impact.people\""
+input impact_people_max_order_by {
+    acnc_id: order_by
+    acnc_url: order_by
+    first_name: order_by
+    guid: order_by
+    last_name: order_by
+    linkedin_url: order_by
+    middle_name: order_by
+    name: order_by
+    person_id: order_by
+}
+
+"order by min() on columns of table \"impact.people\""
+input impact_people_min_order_by {
+    acnc_id: order_by
+    acnc_url: order_by
+    first_name: order_by
+    guid: order_by
+    last_name: order_by
+    linkedin_url: order_by
+    middle_name: order_by
+    name: order_by
+    person_id: order_by
+}
+
+"input type for inserting object relation for remote table \"impact.people\""
+input impact_people_obj_rel_insert_input {
+    data: impact_people_insert_input!
+    on_conflict: impact_people_on_conflict
+}
+
+"on conflict condition type for table \"impact.people\""
+input impact_people_on_conflict {
+    constraint: impact_people_constraint!
+    update_columns: [impact_people_update_column!]!
+    where: impact_people_bool_exp
+}
+
+"ordering options when selecting data from \"impact.people\""
+input impact_people_order_by {
+    acnc_id: order_by
+    acnc_url: order_by
+    first_name: order_by
+    gender: order_by
+    guid: order_by
+    last_name: order_by
+    linkedin_url: order_by
+    middle_name: order_by
+    name: order_by
+    org_people_aggregate: impact_org_people_aggregate_order_by
+    person_id: order_by
+}
+
+"input type for updating data in table \"impact.people\""
+input impact_people_set_input {
+    acnc_id: String
+    acnc_url: String
+    first_name: String
+    gender: bpchar
+    guid: String
+    last_name: String
+    linkedin_url: String
+    middle_name: String
+    name: String
+    person_id: bigint
+}
+
+"order by stddev() on columns of table \"impact.people\""
+input impact_people_stddev_order_by {
+    person_id: order_by
+}
+
+"order by stddev_pop() on columns of table \"impact.people\""
+input impact_people_stddev_pop_order_by {
+    person_id: order_by
+}
+
+"order by stddev_samp() on columns of table \"impact.people\""
+input impact_people_stddev_samp_order_by {
+    person_id: order_by
+}
+
+"order by sum() on columns of table \"impact.people\""
+input impact_people_sum_order_by {
+    person_id: order_by
+}
+
+"order by var_pop() on columns of table \"impact.people\""
+input impact_people_var_pop_order_by {
+    person_id: order_by
+}
+
+"order by var_samp() on columns of table \"impact.people\""
+input impact_people_var_samp_order_by {
+    person_id: order_by
+}
+
+"order by variance() on columns of table \"impact.people\""
+input impact_people_variance_order_by {
+    person_id: order_by
+}
+
+"expression to compare columns of type numeric. All fields are combined with logical 'AND'."
+input numeric_comparison_exp {
+    _eq: numeric
+    _gt: numeric
+    _gte: numeric
+    _in: [numeric!]
+    _is_null: Boolean
+    _lt: numeric
+    _lte: numeric
+    _neq: numeric
+    _nin: [numeric!]
+}
+
+"expression to compare columns of type timestamp. All fields are combined with logical 'AND'."
+input timestamp_comparison_exp {
+    _eq: timestamp
+    _gt: timestamp
+    _gte: timestamp
+    _in: [timestamp!]
+    _is_null: Boolean
+    _lt: timestamp
+    _lte: timestamp
+    _neq: timestamp
+    _nin: [timestamp!]
+}
+
+"expression to compare columns of type timestamptz. All fields are combined with logical 'AND'."
+input timestamptz_comparison_exp {
+    _eq: timestamptz
+    _gt: timestamptz
+    _gte: timestamptz
+    _in: [timestamptz!]
+    _is_null: Boolean
+    _lt: timestamptz
+    _lte: timestamptz
+    _neq: timestamptz
+    _nin: [timestamptz!]
+}
+
+
+scalar bigint
+
+scalar bpchar
+
+scalar date
+
+scalar numeric
+
+scalar timestamp
+
+scalar timestamptz

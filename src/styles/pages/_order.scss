@@ -1,0 +1,16 @@
+.page-order {
+  .form-order {
+    //border: 1px solid #ebeef5;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+
+    .recaptcha {
+      width: 304px;
+      margin: auto;
+
+      & + .el-form-item__error {
+        width: 100%;
+      }
+    }
+  }
+}

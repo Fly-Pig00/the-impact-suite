@@ -1,0 +1,5 @@
+query sizes {
+  impact_organisation(distinct_on: org_size, where: { published: { _eq: 1 } }) {
+    org_size
+  }
+}

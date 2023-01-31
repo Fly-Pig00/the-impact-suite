@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl {
+    max-width: 1360px;
+  }
+}
+
+.app {
+  height: 100%;
+}
+
+@media (min-width: 768px) {
+  .app {
+    height: 100%;
+
+    &.app-with-fixed-header {
+      padding-top: 82px;
+
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 4;
+      }
+    }
+  }
+}
+
+.logo-wrapper {
+  display: flex;
+  line-height: 20px;
+
+  a {
+    font-family: "Mark Pro", Arial, helvetica, sans-serif;
+  }
+
+  .logo-link {
+    height: 50px;
+  }
+
+  .back {
+    color: #999;
+  }
+}
+
+header {
+  background-color: #323541;
+}
+
+.header {
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.back-to-search {
+  border-bottom: 1px solid #EBEEF5;
+  a {
+    color: #409EFF;
+    text-decoration: none;
+  }
+}
+
+.charity-logo {
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+  object-fit: contain;
+}

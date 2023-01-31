@@ -1,0 +1,8 @@
+query states {
+  impact_organisation(
+    distinct_on: operates_aus
+    where: { published: { _eq: 1 } }
+  ) {
+    operates_aus
+  }
+}

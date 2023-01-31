@@ -1,0 +1,65 @@
+query charityDetail($abn: bigint!, $type: String) {
+  impact_organisation_aggregate(
+    where: { type: { _eq: $type }, published: { _eq: 1 } }
+  ) {
+    aggregate {
+      avg {
+        tis_liquidity_rating
+        tis_rating
+      }
+    }
+  }
+  impact_annual_statement(
+    where: { abn: { _eq: $abn } }
+    order_by: { financial_report_date_received: desc_nulls_last }
+    limit: 1
+  ) {
+    revenue_from_government
+    donations_and_bequests
+    revenue_from_goods_and_services
+    all_other_revenue
+    other_income
+
+    employee_expenses
+    interest_expenses
+    grants_and_donations_made_for_use_in_australia
+    grants_and_donations_made_for_use_outside_australia
+    all_other_expenses
+
+    total_revenue
+
+    main_activity
+    other_activity
+    main_beneficiaries
+    other_beneficiaries_description
+    other_beneficiaries_not_listed
+
+    operates_in_act
+    operates_in_nsw
+    operates_in_nt
+    operates_in_qld
+    operates_in_sa
+    operates_in_tas
+    operates_in_vic
+    operates_in_wa
+
+    staff_full_time
+    staff_part_time
+    staff_casual
+
+    operating_countries
+    staff_volunteers
+
+    total_gross_income
+    total_expenses
+    total_assets
+    total_liabilities
+  }
+  impact_annual_statement_aggregate(where: { category: { _ilike: $type } }) {
+    aggregate {
+      avg {
+        total_revenue
+      }
+    }
+  }
+}

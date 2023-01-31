@@ -1,0 +1,24 @@
+query charityDetail($abn: bigint!) {
+  impact_annual_statement(
+    where: { abn: { _eq: $abn } }
+    order_by: { financial_report_date_received: desc_nulls_last }
+    limit: 5
+  ) {
+    financial_report_date_received
+
+    revenue_from_government
+    donations_and_bequests
+    total_gross_income
+
+    employee_expenses
+    interest_expenses
+    total_expenses
+
+    total_assets
+    total_liabilities
+
+    total_full_time_equivalent_staff
+
+    staff_volunteers
+  }
+}

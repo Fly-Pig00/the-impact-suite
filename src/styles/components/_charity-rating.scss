@@ -1,0 +1,42 @@
+.charity-rating {
+  text-align: center;
+  margin: 0 5px;
+
+  span.marker {
+    width: 18px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #EDEDED;
+    display: inline-block;
+  }
+
+  &[data-type="purpose"][data-status="1"] {
+    span.marker {
+      background-color: #FFDE17;
+    }
+  }
+  &[data-type="people"][data-status="1"] {
+    span.marker {
+      background-color: #00A79D;
+    }
+  }
+  &[data-type="process"][data-status="1"] {
+    span.marker {
+      background-color: #00AEEF;
+    }
+  }
+  &[data-type="impact"][data-status="1"] {
+    span.marker {
+      background-color: #92278F;
+    }
+  }
+  &[data-type="review"][data-status="1"] {
+    span.marker {
+      background-color: #DA1C5C;
+    }
+  }
+
+  label {
+    font-size: x-small;
+  }
+}

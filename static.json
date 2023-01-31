@@ -1,0 +1,13 @@
+{
+  "root": "dist",
+  "clean_urls": true,
+  "routes": {
+    "/**": "index.html"
+  },
+  "https_only": true,
+  "proxies": {
+    "/v1/graphql": {
+      "origin": "https://theimpactsuite.herokuapp.com/v1/graphql"
+    }
+  }
+}

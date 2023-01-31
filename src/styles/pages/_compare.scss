@@ -1,0 +1,53 @@
+.page-comparison {
+  h3 {
+    font-weight: 900;
+  }
+
+  table.table-comparing-charity-list {
+    label.charity-name {
+      font-size: 1rem;
+      color: #212529;
+    }
+
+    tr {
+      td {
+        text-align: center;
+        color: #6c757d;
+        font-size: 0.6rem;
+
+        &:first-child {
+          text-align: left;
+        }
+
+        .size label {
+          font-size: 0.6rem;
+        }
+
+        .not-provided {
+          color: #6c757d66;
+        }
+      }
+
+      &.no-border {
+        td {
+          border-top: none;
+        }
+      }
+
+      &.section-header {
+        td {
+          border-top: none;
+          border-bottom: 2px solid #666;
+          padding-bottom: 0.3rem;
+          padding-top: 1.5rem;
+
+          h5 {
+            font-weight: 900;
+            color: #212529;
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+}

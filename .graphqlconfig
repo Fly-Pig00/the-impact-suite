@@ -1,0 +1,13 @@
+{
+  "schemaPath": "src/graphql/schema.gql",
+  "extensions": {
+    "endpoints": {
+      "Default (https://impactsuite.herokuapp.com/v1/graphql)": {
+        "url": "https://theimpactsuite.herokuapp.com/v1/graphql",
+        "headers": {
+          "x-hasura-admin-secret": "Anticip8tion"
+        }
+      }
+    }
+  }
+}

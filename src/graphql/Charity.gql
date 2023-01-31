@@ -1,0 +1,46 @@
+query charities($id: bigint!) {
+  impact_organisation_by_pk(org_id: $id) {
+    org_id
+    abn
+    type
+    org_size
+
+    name
+    tis_rating
+    tis_gov_people
+    tis_gov_purpose
+    tis_gov_process
+    tis_gov_impact
+    tis_gov_review
+
+    tis_lotus_people
+    tis_lotus_purpose
+    tis_lotus_process
+    tis_lotus_impact
+    tis_lotus_review
+
+    summary
+    purpose
+    logo_url
+
+    gov_statement
+    gov_funding_use
+    gov_diversity_statement
+    gov_impact_statement
+    gov_donate_statement
+
+    state
+    tis_rating
+    tis_liquidity_rating
+
+    estab_year
+
+    twitter
+
+    org_people {
+      person {
+        name
+      }
+    }
+  }
+}

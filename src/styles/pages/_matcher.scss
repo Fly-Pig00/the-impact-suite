@@ -1,0 +1,31 @@
+.page-matcher {
+  .form-matcher {
+    //border: 1px solid #ebeef5;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+
+    .step-container {
+      min-width: 100%;
+
+      .el-step.is-simple .el-step__icon {
+        width: 24px;
+        height: 24px;
+        font-size: 14px;
+      }
+    }
+
+    .step-content-container {
+      min-height: 240px;
+
+      h5 {
+        font-weight: 900;
+      }
+    }
+
+    .step-action-container {
+      button {
+        min-width: 120px;
+      }
+    }
+  }
+}

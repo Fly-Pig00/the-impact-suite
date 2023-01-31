@@ -1,0 +1,5 @@
+query benefits {
+  impact_organisation(distinct_on: benefits, where: { published: { _eq: 1 } }) {
+    benefits
+  }
+}

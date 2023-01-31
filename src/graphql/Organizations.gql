@@ -1,0 +1,5 @@
+query organizations {
+  impact_organisation(distinct_on: type, where: { published: { _eq: 1 } }) {
+    type
+  }
+}

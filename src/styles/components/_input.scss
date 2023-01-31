@@ -1,0 +1,15 @@
+@import "~element-ui/packages/theme-chalk/src/button";
+
+.el-input-group__append {
+  button.el-button {
+    &.el-button--primary {
+      @include button-variant($--button-primary-font-color, $--button-primary-background-color, $--button-primary-border-color);
+
+      border-top: 1px solid #409EFF;
+      border-bottom: 1px solid #409EFF;
+      margin: -10px -22px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}

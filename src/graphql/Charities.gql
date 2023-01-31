@@ -1,0 +1,56 @@
+query charities(
+  $keyword: String
+  $abn: bigint
+  $organization: String
+  $size: String
+  $postcode: String
+  $country: String
+  $state: String
+  $deductibleGiftRecipient: String
+  $benefit: String
+  $sort: order_by
+) {
+  impact_organisation(
+    limit: 100
+    where: {
+        _and: [
+            {
+                _or: [
+                    { name: { _ilike: $keyword } }
+                    { abn: { _eq: $abn } }
+                ]
+            },
+            {
+                _or: [
+                    { operates_os: { _similar: $country } }
+                    { operates_aus: { _similar: $state } }
+                ]
+            }
+        ]
+      type: { _ilike: $organization }
+      org_size: { _ilike: $size }
+      postcode: { _ilike: $postcode }
+      deductible_gift_recipient: { _ilike: $deductibleGiftRecipient }
+      benefits: { _similar: $benefit }
+      published: { _eq: 1 }
+    }
+    order_by: {
+        last_reported_total_revenue: $sort,
+        tis_rating: $sort,
+        name: $sort,
+        org_id: $sort
+    }
+  ) {
+    org_id
+    abn
+    name
+    tis_rating
+    tis_gov_people
+    tis_gov_purpose
+    tis_gov_process
+    tis_gov_impact
+    tis_gov_review
+    summary
+    logo_url
+  }
+}

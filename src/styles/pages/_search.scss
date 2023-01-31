@@ -1,0 +1,106 @@
+.page-search {
+  .search-parameters {
+    background-color: #F2F2F3;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+
+    label {
+      color: #606266;
+      font-size: 14px;
+    }
+
+    .el-dropdown-link {
+      color: #909299;
+      font-size: 14px;
+    }
+  }
+
+  .table-charity-list {
+    tr {
+      cursor: default;
+    }
+    .row-selected>td {
+      background: oldlace;
+    }
+
+    .charity-logo {
+      width: 100px;
+      height: 100px;
+      //border: 1px solid #EBEEF5;
+      //border-radius: 4px;
+    }
+  }
+
+  .transition-pane-compare-confirm-enter-active,
+  .transition-pane-compare-confirm-leave-active {
+    transition: all .5s ease;
+  }
+  .transition-pane-compare-confirm-enter,
+  .transition-pane-compare-confirm-leave-to {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  .pane-compare-confirm {
+    background-color: #F3F5F8;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.15);
+
+    h4 {
+      font-weight: 900;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+
+    ul.selected-charity-list {
+      li {
+        width: 150px;
+        padding: 10px;
+
+        img {
+          width: 75px;
+          height: 75px;
+          border-radius: 4px;
+          border: 2px solid #ddd;
+          object-fit: contain;
+        }
+        label {
+          margin-top: 5px;
+          font-size: 0.6rem;
+          font-weight: 900;
+          vertical-align: top;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          width: 100%;
+          overflow-x: hidden;
+        }
+
+        .logo-placeholder {
+          width: 75px;
+          height: 75px;
+          border-radius: 4px;
+          border: 2px dashed #ddd;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+
+
+@media (min-width: 768px) {
+  .page-search {
+    padding-top: 56px;
+
+    .search-parameters {
+      position: fixed;
+      top: 82px;
+      left: 0;
+      right: 0;
+      z-index: 4;
+    }
+  }
+}

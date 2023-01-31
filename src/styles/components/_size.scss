@@ -1,0 +1,18 @@
+.size {
+  label {
+    text-transform: capitalize;
+    font-size: 0.8rem;
+  }
+
+  .circle {
+    display: inline-block;
+    background-color: #92278F;
+    border-radius: 50%;
+    line-height: 20px;
+    vertical-align: middle;
+
+    &.grey {
+      background-color: #57575733;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+query charitiesByName($keyword: String) {
+  impact_organisation(
+    limit: 100
+    where: { name: { _ilike: $keyword }, published: { _eq: 1 } }
+    order_by: { name: asc, org_id: asc }
+  ) {
+    org_id
+    name
+  }
+}
