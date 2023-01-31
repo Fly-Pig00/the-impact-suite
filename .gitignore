@@ -7,10 +7,7 @@ node_modules
 
 # local env files
 .env.local
-.env.*.local
-.env.development
-.env.example
-.env.production
+.env.*
 
 # Log files
 npm-debug.log*
